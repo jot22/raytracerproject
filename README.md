@@ -11,7 +11,7 @@
 * How many hours did it take you to complete this final project? 
 * Did you collaborate or share ideas with any other students/TAs/Professors?
 * Did you use any external resources? 
-  * Note it is fair to utilize some tutorials--cite them here, and make sure to add your own personal touch!
+  * Note it is fair to utilize some tutorials--cite them here. You **must** add your own personal touch howeer!
   * *edit this*
   * *edit this*
   * *edit this*
@@ -78,7 +78,7 @@ Use the `build.py`. You can modify build.py to your needs, but I should be able 
 
 Pretend you are deploying this software to someone who has no idea what your code does and needs to be able to run it. The only assumption you should make is the user has SDL2 setup and perhaps a web browser.
 
-### Video deliverable
+### Video Deliverable
 
 For this project, you need to make a video recording of your project. Here are the specifications:
 
@@ -90,7 +90,9 @@ For this project, you need to make a video recording of your project. Here are t
     - Give a quick 'tutorial' like summary of how you solved the problem.
     - You can talk about other important features in your project, but dedicate some time on one specific item.
     
-Videos will publicly be uploaded to the course websites 'hall of fame'.
+Videos may publicly be uploaded to the course websites 'hall of fame'--please keep the links up!
+
+#### Sample Video Deliverable
 
 Here is a sample from previous years:
 
@@ -99,14 +101,14 @@ Here is a sample from previous years:
     - I can hear the speakers voice.
     - The talk is well outlined and concise.
     - The speaker shows off the technical parts of the code well.
-    - The speaker shows the actual visuals and in a good resolution video.
-    - It is not a very long video with lots of silence.
+    - The speaker shows the actual visuals and uses a high resolution video.
+    - It is not a very long video with lots of silence or 'umms'
     - If I were to see this on a resume, I would have a very good idea of what the developer knows.
 
 ### Deliverables
 
 * You need to commit your code to this repository.
-* Your program needs to compile using a build.py script.
+* Your program needs to compile using a build.py script (Unless it is a webgl project).
 * Put a link to a youtube/vimeo video in this README.md.
 
 ### Rubric
