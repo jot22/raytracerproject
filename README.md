@@ -119,7 +119,7 @@ Here is a sample from previous years:
     </tr>
     <tr>
       <td>(33.3%) Project Completion</td>
-      <td align="left">Core -Does the project compile and run. Is it polished without any bugs (No weird visual artifacts). Did you make a video?</td>
+     <td align="left"><ul><li>Does the project compile and run.</li><li>Is it polished without any bugs (No weird visual artifacts).</li><li>Did you make a video?</li></ul></td>
     </tr>
     <tr>
       <td>(33.3%) Technical</td>
