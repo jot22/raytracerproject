@@ -142,3 +142,5 @@ Here is a sample from previous years:
 - A: Yes under the following conditions
   - You acknowledge your team members and any third parties fairly for their contributions.
   - You remove the README.md provided with the assignment (delete it entirely from your github history), as you'll want your own readme anyway.
+- Q: May I have a team of 4--I really want 4 team members?
+- A: No. I recommend a team size of 1-2.
