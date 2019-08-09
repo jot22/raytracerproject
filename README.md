@@ -5,16 +5,17 @@
 ## Edit this line: Put your link to your youtube video here (see deliverables).
 
 * Name and partners name(At most teams of 3 folks total)
-  * Team member 1: *edit this*
-  * Team member 2: *edit this*
+  * Team member 1: Joseph Triolo
+  * Team member 2: Atanas Pavlov
   * Team member 3: *edit this*
-* How many hours did it take you to complete this final project? 
-* Did you collaborate or share ideas with any other students/TAs/Professors?
+* How many hours did it take you to complete this final project? 50
+* Did you collaborate or share ideas with any other students/TAs/Professors? Talked about Ray Tracing with Mike Shah.
 * Did you use any external resources? 
   * Note it is fair to utilize some tutorials--cite them here. You **must** add your own personal touch howeer!
-  * *edit this*
-  * *edit this*
-  * *edit this*
+  * http://www.realtimerendering.com/raytracing/Ray%20Tracing%20in%20a%20Weekend.pdf
+  * http://www.realtimerendering.com/raytracing/Ray%20Tracing_%20The%20Next%20Week.pdf
+  * https://www.scratchapixel.com/lessons/3d-basic-rendering/ray-tracing-rendering-a-triangle
+  * https://cadxfem.org/inf/Fast%20MinimumStorage%20RayTriangle%20Intersection.pdf
   * (Optional) What was the most interesting part of the Final Assignment? How could the instructor improve the final project?
  
 ## Description
