@@ -13,6 +13,7 @@ public:
 
     sphereCanHit(vec3 cen, float r, material *m) : center(cen), radius(r), mat_ptr(m) {};
 
+
     bool hit(const ray &r, float tMin, float tMax, hit_record &rec) const override;
 
     bool bounding_box(float t0, float t1, aabb &box) const override;

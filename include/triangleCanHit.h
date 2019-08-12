@@ -19,6 +19,10 @@ public:
         mat = m;
     }
 
+    ~triangleCanHit() {
+        delete mat;
+    }
+
     bool hit(const ray &r, float t_min, float t_max, hit_record &rec) const override;
 
     bool bounding_box(float t0, float t1, aabb &box) const override;

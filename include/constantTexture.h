@@ -7,15 +7,18 @@
 
 #include "texture.h"
 
-class constantTexture: public texture{
+class constantTexture : public texture {
 public:
     constantTexture() = default;
 
-    explicit constantTexture(vec3 c): color(c){}
+    ~constantTexture() = default;
 
-    vec3 value(float u, float v, const vec3& p) const override {
+    explicit constantTexture(vec3 c) : color(c) {}
+
+    vec3 value(float u, float v, const vec3 &p) const override {
         return color;
     }
+
     vec3 color;
 };
 

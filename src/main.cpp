@@ -529,7 +529,7 @@ int main() {
     }
     std::cout << ":::::::Render Complete:::::::\n";
 
-    //REMEMBER TO FREE THE SPHERES
+    delete world;
 
     return 0;
 }

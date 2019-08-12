@@ -27,15 +27,16 @@ public:
     //by a child class that derives from the top level parent class
     //https://www.geeksforgeeks.org/virtual-function-cpp/
     virtual bool hit(const ray &r, float t_min, float t_max, hit_record &rec) const = 0;
-    virtual bool bounding_box(float t0,float t1, aabb& box) const = 0;
+
+    virtual bool bounding_box(float t0, float t1, aabb &box) const = 0;
 
 };
 
-void get_sphere_uv(const vec3& p, float &u, float &v){
-    float phi = atan2(p.z(),p.x());
+void get_sphere_uv(const vec3 &p, float &u, float &v) {
+    float phi = atan2(p.z(), p.x());
     float theta = asin(p.y());
-    u = 1.0f-(phi+Pi) / (2.0f*Pi);
-    v = (theta + Pi/2) / Pi;
+    u = 1.0f - (phi + Pi) / (2.0f * Pi);
+    v = (theta + Pi / 2) / Pi;
 }
 
 
