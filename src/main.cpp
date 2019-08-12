@@ -450,7 +450,7 @@ canHitGeneric *makeBunny() {
 
 int main() {
     ofstream myfile;
-    myfile.open("randomspheres1.ppm");
+    myfile.open("test.ppm");
 
     //Size
     int nx = 1280;
