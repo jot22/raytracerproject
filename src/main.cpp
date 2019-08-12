@@ -529,6 +529,8 @@ int main() {
     }
     std::cout << ":::::::Render Complete:::::::\n";
 
+    myfile.close();
+
 //    delete world; ****************
 
     return 0;
