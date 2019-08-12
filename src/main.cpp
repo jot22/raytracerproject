@@ -475,8 +475,9 @@ int main() {
     canHitGeneric *world =
 //            cornellHotBox2();
 //            makeBunny();
-//            makeTriangleScene();//cornellBox();//cornellLotsOfSpheres();//cornellHotBox();//cornellBox();
-            randomSceneGen();
+            makeTriangleScene();
+// cornellBox();//cornellLotsOfSpheres();//cornellHotBox();//cornellBox();
+//            randomSceneGen();
     //camera(float vFOV, float aspect, vec3 lookFrom, vec3 lookAt, vec3 vUp, aperture, focus_dist)
     //RandomScene Values
     vec3 lookFrom(13, 2, 3);
