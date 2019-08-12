@@ -26,6 +26,8 @@ public:
     //Virtual means function can be changed at run-time,
     //by a child class that derives from the top level parent class
     //https://www.geeksforgeeks.org/virtual-function-cpp/
+    ~canHitGeneric() = default;
+
     virtual bool hit(const ray &r, float t_min, float t_max, hit_record &rec) const = 0;
 
     virtual bool bounding_box(float t0, float t1, aabb &box) const = 0;
