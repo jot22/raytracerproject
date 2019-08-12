@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="rayTracerProject"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/ap/Desktop/repoWindows/rayTracerProject/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/ap/Desktop/repoWindows/rayTracerProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/ap/Desktop/repoWindows/rayTracerProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/ap/Desktop/repoWindows/rayTracerProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/ap/Desktop/repoWindows/rayTracerProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/ap/Desktop/repoWindows/rayTracerProject/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/ap/Desktop/repoWindows/rayTracerProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/ap/Desktop/repoWindows/rayTracerProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/ap/Desktop/repoWindows/rayTracerProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/ap/Desktop/repoWindows/rayTracerProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rayTracerProject">
+				<Option output="/home/ap/Desktop/repoWindows/rayTracerProject/cmake-build-debug/rayTracerProject" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ap/Desktop/repoWindows/rayTracerProject/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/ap/Desktop/repoWindows/rayTracerProject/include"/>
+					<Add directory="/usr/include/c++/8"/>
+					<Add directory="/usr/include/c++/8/x86_64-suse-linux"/>
+					<Add directory="/usr/include/c++/8/backward"/>
+					<Add directory="/usr/lib64/gcc/x86_64-suse-linux/8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib64/gcc/x86_64-suse-linux/8/include-fixed"/>
+					<Add directory="/usr/lib64/gcc/x86_64-suse-linux/8/../../../../x86_64-suse-linux/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/ap/Desktop/repoWindows/rayTracerProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 rayTracerProject"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/ap/Desktop/repoWindows/rayTracerProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/ap/Desktop/repoWindows/rayTracerProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/ap/Desktop/repoWindows/rayTracerProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rayTracerProject/fast">
+				<Option output="/home/ap/Desktop/repoWindows/rayTracerProject/cmake-build-debug/rayTracerProject" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ap/Desktop/repoWindows/rayTracerProject/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/ap/Desktop/repoWindows/rayTracerProject/include"/>
+					<Add directory="/usr/include/c++/8"/>
+					<Add directory="/usr/include/c++/8/x86_64-suse-linux"/>
+					<Add directory="/usr/include/c++/8/backward"/>
+					<Add directory="/usr/lib64/gcc/x86_64-suse-linux/8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib64/gcc/x86_64-suse-linux/8/include-fixed"/>
+					<Add directory="/usr/lib64/gcc/x86_64-suse-linux/8/../../../../x86_64-suse-linux/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/ap/Desktop/repoWindows/rayTracerProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 rayTracerProject/fast"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/ap/Desktop/repoWindows/rayTracerProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/ap/Desktop/repoWindows/rayTracerProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/ap/Desktop/repoWindows/rayTracerProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/ap/Desktop/repoWindows/rayTracerProject/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/ap/Desktop/repoWindows/rayTracerProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/ap/Desktop/repoWindows/rayTracerProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/ap/Desktop/repoWindows/rayTracerProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/ap/Desktop/repoWindows/rayTracerProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/CMakeLists.txt">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/README.md">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/SDL2.dll">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/build.py">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/bunny_centered.obj">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/c.obj">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/cap.ppm">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/cmake-build-debug/CMakeCache.txt">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/cmake-build-debug/Makefile">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/cmake-build-debug/cmake_install.cmake">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/cmake-build-debug/rayTracerProject.cbp">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/cornell.ppm">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/include/OBJ.h">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/include/aabb.h">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/include/boxCanHit.h">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/include/bvhNode.h">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/include/camera.h">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/include/canHitGeneric.h">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/include/canHitGenericList.h">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/include/checkerBoardTexture.h">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/include/constantMedium.h">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/include/constantTexture.h">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/include/dielectricMaterial.h">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/include/diffuseLightMaterial.h">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/include/diffuseMaterial_Lambertian.h">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/include/flipNormals.h">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/include/generateWorld.h">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/include/imageTexture.h">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/include/isotrophic.h">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/include/material.h">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/include/metalMaterial.h">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/include/ppmLoader.h">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/include/ray.h">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/include/rectangleCanHit.h">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/include/rotateY.h">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/include/sphereCanHit.h">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/include/texture.h">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/include/translate.h">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/include/triangleCanHit.h">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/include/vec3.h">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/include/xzRectangleCanHit.h">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/include/yzRectangleCanHit.h">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/lab.exe">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/out.ppm">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/outVec.ppm">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/outVecHQ.ppm">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/src/main.cpp">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/src/obj.cpp">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/w.ppm">
+			<Option target="rayTracerProject"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/repoWindows/rayTracerProject/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

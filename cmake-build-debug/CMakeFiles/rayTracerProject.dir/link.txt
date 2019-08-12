@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/rayTracerProject.dir/src/main.cpp.o CMakeFiles/rayTracerProject.dir/src/obj.cpp.o ../bunny_centered.obj ../c.obj  -o rayTracerProject 
