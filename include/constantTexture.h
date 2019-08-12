@@ -11,7 +11,7 @@ class constantTexture : public texture {
 public:
     constantTexture() = default;
 
-    ~constantTexture() = default;
+    ~constantTexture() {}
 
     explicit constantTexture(vec3 c) : color(c) {}
 
