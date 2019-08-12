@@ -13,26 +13,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d96c5acb-77f1-4a0c-b0d2-ab56ebc49346" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/a.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdCXX/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdCXX/a.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/rayTracerProject.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/rayTracerProject.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/boxCanHit.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/boxCanHit.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/canHitGeneric.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/canHitGeneric.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/canHitGenericList.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/canHitGenericList.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/constantMedium.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/constantMedium.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/diffuseMaterial_Lambertian.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/diffuseMaterial_Lambertian.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/rectangleCanHit.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/rectangleCanHit.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/sphereCanHit.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/sphereCanHit.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/triangleCanHit.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/triangleCanHit.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/xzRectangleCanHit.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/xzRectangleCanHit.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/yzRectangleCanHit.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/yzRectangleCanHit.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab" beforeDir="false" afterPath="$PROJECT_DIR$/lab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -50,8 +30,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="413" selection-start-line="413" selection-end-line="413" />
+            <state relative-caret-position="136">
+              <caret line="405" column="21" selection-start-line="405" selection-start-column="21" selection-end-line="405" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -150,7 +130,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="4" />
     <option name="width" value="902" />
     <option name="height" value="484" />
@@ -161,27 +141,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="rayTracerProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rayTracerProject" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rayTracerProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rayTracerProject" type="462c0819:PsiDirectoryNode" />
-              <item name="include" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rayTracerProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rayTracerProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -235,17 +195,18 @@
       <workItem from="1565458745422" duration="6399000" />
       <workItem from="1565498543499" duration="11462000" />
       <workItem from="1565646776813" duration="599000" />
+      <workItem from="1565648328690" duration="16000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46621000" />
+    <option name="totallyTimeSpent" value="46637000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1381" height="885" extended-state="7" />
+    <frame x="-6" y="-6" width="1381" height="885" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16855632" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.052154195" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -259,7 +220,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="CMake" order="11" visible="true" weight="0.205298" />
+      <window_info anchor="bottom" id="CMake" order="11" visible="true" weight="0.0397351" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -460,8 +421,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="413" selection-start-line="413" selection-end-line="413" />
+        <state relative-caret-position="136">
+          <caret line="405" column="21" selection-start-line="405" selection-start-column="21" selection-end-line="405" selection-end-column="21" />
         </state>
       </provider>
     </entry>

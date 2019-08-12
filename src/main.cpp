@@ -403,7 +403,7 @@ int main() {
 
 
     ofstream myfile;
-    myfile.open("outVec.ppm");
+    myfile.open("test.ppm");
 
     //Size
     //LEAVE AT 20 by 10 for Valgrind, Change to 1280 by 640 for rendering checks
