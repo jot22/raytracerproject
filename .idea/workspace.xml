@@ -9,7 +9,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d96c5acb-77f1-4a0c-b0d2-ab56ebc49346" name="Default Changelist" comment="" />
+    <list default="true" id="d96c5acb-77f1-4a0c-b0d2-ab56ebc49346" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="429" column="98" lean-forward="true" selection-start-line="429" selection-start-column="98" selection-end-line="430" selection-end-column="90" />
+            <state relative-caret-position="292">
+              <caret line="427" column="39" selection-start-line="427" selection-start-column="39" selection-end-line="427" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -137,6 +139,7 @@
       <find>makecamera</find>
       <find>randomscene</find>
       <find>new</find>
+      <find>pix</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -258,12 +261,12 @@
       <workItem from="1565319573107" duration="557000" />
       <workItem from="1565369802481" duration="5254000" />
       <workItem from="1565619139480" duration="6007000" />
-      <workItem from="1565649546119" duration="3468000" />
+      <workItem from="1565649546119" duration="3804000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38439000" />
+    <option name="totallyTimeSpent" value="38775000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1381" height="885" extended-state="6" />
@@ -429,13 +432,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/canHitGenericList.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/canHitGeneric.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="343">
@@ -443,10 +439,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/include/canHitGenericList.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="429" column="98" lean-forward="true" selection-start-line="429" selection-start-column="98" selection-end-line="430" selection-end-column="90" />
+        <state relative-caret-position="292">
+          <caret line="427" column="39" selection-start-line="427" selection-start-column="39" selection-end-line="427" selection-end-column="39" />
         </state>
       </provider>
     </entry>
