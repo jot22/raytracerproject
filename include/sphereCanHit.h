@@ -11,7 +11,7 @@ class sphereCanHit : public canHitGeneric {
 public:
     sphereCanHit() = default;
 
-    sphereCanHit(vec3 cen, float r, shared_ptr<material> *m) : center(cen), radius(r), mat_ptr(m) {};
+    sphereCanHit(vec3 cen, float r, material *m) : center(cen), radius(r), mat_ptr(m) {};
 
     bool hit(const ray &r, float tMin, float tMax, hit_record &rec) const override;
 
@@ -19,8 +19,7 @@ public:
 
     vec3 center;
     float radius{};
-    shared_ptr<material> *mat_ptr{};
-    //material *mat_ptr{};
+    material *mat_ptr{};
 };
 
 bool sphereCanHit::bounding_box(float t0, float t1, aabb &box) const {
@@ -42,7 +41,7 @@ bool sphereCanHit::hit(const ray &r, float tMin, float tMax, hit_record &rec) co
             rec.p = r.point_at_param(rec.t);
             get_sphere_uv((rec.p - center) / radius, rec.u, rec.v);
             rec.normal = (rec.p - center) / radius;
-            rec.mat_ptr = *mat_ptr;
+            rec.mat_ptr = mat_ptr;
             return true;
         }
         temp = (-b + sqrt(b * b - a * c)) / a;
@@ -51,7 +50,7 @@ bool sphereCanHit::hit(const ray &r, float tMin, float tMax, hit_record &rec) co
             rec.p = r.point_at_param(rec.t);
             get_sphere_uv((rec.p - center) / radius, rec.u, rec.v);
             rec.normal = (rec.p - center) / radius;
-            rec.mat_ptr = *mat_ptr;
+            rec.mat_ptr = mat_ptr;
             return true;
         }
     }

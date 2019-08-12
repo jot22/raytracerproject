@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ap/Desktop/repoWindows/rayTracerProject/src/main.cpp" "/home/ap/Desktop/repoWindows/rayTracerProject/cmake-build-debug/CMakeFiles/rayTracerProject.dir/src/main.cpp.o"
-  "/home/ap/Desktop/repoWindows/rayTracerProject/src/obj.cpp" "/home/ap/Desktop/repoWindows/rayTracerProject/cmake-build-debug/CMakeFiles/rayTracerProject.dir/src/obj.cpp.o"
+  "C:/Users/ap/Desktop/graphics/rayTracePro/rayTracerProject/src/main.cpp" "C:/Users/ap/Desktop/graphics/rayTracePro/rayTracerProject/cmake-build-debug/CMakeFiles/rayTracerProject.dir/src/main.cpp.obj"
+  "C:/Users/ap/Desktop/graphics/rayTracePro/rayTracerProject/src/obj.cpp" "C:/Users/ap/Desktop/graphics/rayTracePro/rayTracerProject/cmake-build-debug/CMakeFiles/rayTracerProject.dir/src/obj.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

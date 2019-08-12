@@ -11,10 +11,6 @@ class canHitGenericList: public canHitGeneric{
 public:
     canHitGenericList() = default;
 
-    ~canHitGenericList() override {
-        delete[] list;
-    }
-
     canHitGenericList(canHitGeneric **l,int n){
         list = l;
         list_size = n;
@@ -23,9 +19,8 @@ public:
     bool hit(const ray& r, float tMin, float tMax, hit_record& rec) const override;
 
     bool bounding_box(float t0,float t1,aabb& box) const override;
-
-    canHitGeneric **list{};
-    int list_size{};
+    canHitGeneric **list;
+    int list_size;
 };
 
 bool canHitGenericList::bounding_box(float t0, float t1, aabb &box) const {
@@ -33,7 +28,7 @@ bool canHitGenericList::bounding_box(float t0, float t1, aabb &box) const {
         return false;
     }
 
-    aabb tempBox{};
+    aabb tempBox;
     bool first_true = list[0]->bounding_box(t0,t1,tempBox);
     if(!first_true){
         return false;
@@ -52,7 +47,7 @@ bool canHitGenericList::bounding_box(float t0, float t1, aabb &box) const {
 }
 
 bool canHitGenericList::hit(const ray& r, float tMin, float tMax, hit_record& rec) const{
-    hit_record temp_rec{};
+    hit_record temp_rec;
     bool hasHit = false;
     double closestTry = tMax;
     for(int i = 0; i < list_size; i++){

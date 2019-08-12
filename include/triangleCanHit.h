@@ -10,33 +10,23 @@
 
 class triangleCanHit : public canHitGeneric {
 public:
-    triangleCanHit() = default;
+    triangleCanHit() {}
 
-    triangleCanHit(vec3 f0, vec3 f1, vec3 f2, shared_ptr<material> m) {
+    triangleCanHit(vec3 f0, vec3 f1, vec3 f2, material *m) {
         face0 = f0;
         face1 = f1;
         face2 = f2;
         mat = m;
-
-    }
-
-    ~triangleCanHit() override {
-       // delete[] mat;
-//        delete &mat;
-//        delete[] &face0;
-//        delete[] &face1;
-//        delete[] &face2;
     }
 
     bool hit(const ray &r, float t_min, float t_max, hit_record &rec) const override;
 
     bool bounding_box(float t0, float t1, aabb &box) const override;
 
-    vec3 face0{};
-    vec3 face1{};
-    vec3 face2{};
-    shared_ptr<material> mat{};
-    //material *mat{};
+    vec3 face0;
+    vec3 face1;
+    vec3 face2;
+    material *mat;
 };
 
 bool triangleCanHit::hit(const ray &r, float t_min, float t_max, hit_record &rec) const {

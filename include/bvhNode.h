@@ -14,11 +14,6 @@ class bvhNode: public canHitGeneric{
 public:
     bvhNode() = default;
 
-    ~bvhNode() override {
-        delete[] left;
-        delete[] right;
-    }
-
     bvhNode(canHitGeneric **l,int n,float time0,float time1);
 
     bool hit(const ray& r, float t_min, float t_max, hit_record& rec) const override;

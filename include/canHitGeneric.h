@@ -18,16 +18,11 @@ struct hit_record {
     float v;
     vec3 p;
     vec3 normal;
-    shared_ptr<material> mat_ptr;
+    material *mat_ptr;
 };
 
 class canHitGeneric {
 public:
-    virtual ~canHitGeneric() = default;
-    canHitGeneric() = default;;
-
-
-
     //Virtual means function can be changed at run-time,
     //by a child class that derives from the top level parent class
     //https://www.geeksforgeeks.org/virtual-function-cpp/

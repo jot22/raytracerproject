@@ -11,11 +11,6 @@ class checkerBoardTexture: public texture{
 public:
     checkerBoardTexture() = default;
 
-    ~checkerBoardTexture() override {
-        delete[] odd;
-        delete[] even;
-    }
-
     checkerBoardTexture(texture *t0,texture *t1){
         odd = t1;
         even = t0;
