@@ -20,6 +20,7 @@ public:
         for (int i = 0; i < list_size; ++i) {
             delete list[i];
         }
+        delete[] list;
     }
 
     bool hit(const ray &r, float tMin, float tMax, hit_record &rec) const override;

@@ -13,7 +13,7 @@ public:
     explicit diffuseMaterial_Lambertian(texture *a) : albedo(a) {}
 
     ~diffuseMaterial_Lambertian() {
-//        delete albedo;
+        delete albedo;
     }
 
     bool scatter(const ray &r_in, const hit_record &rec, vec3 &attenuation, ray &scattered) const override {
