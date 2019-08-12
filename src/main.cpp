@@ -431,7 +431,7 @@ canHitGeneric *makeTriangleScene() {
 //    list[i++] = new triangleCanHit(vec3(0, 0, -1), vec3(4, 0, -1), vec3(2, 2, -1), red);
 //    list[i++] = new sphereCanHit(vec3(0, 0, -1), 0.5,
 //                                 new diffuseMaterial_Lambertian(new constantTexture(vec3(0.1, 0.2, 0.5))));
-    return new canHitGenericList(list, i);;
+    return new canHitGenericList(list, i);
 }
 
 canHitGeneric *makeBunny() {
