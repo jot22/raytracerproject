@@ -353,25 +353,26 @@ camera makeCameraBox(float vFOV, float wH, vec3 z, float aperture, float distToF
 
 
 canHitGeneric *makeTriangleScene() {
-     auto **list = new canHitGeneric *[2];
+    auto **list = new canHitGeneric *[2];
 
 
-     //Bullshit I tried to get it working, idk...
+    //Bullshit I tried to get it working, idk...
 
     //shared_ptr<canHitGeneric> **list(new canHitGeneric*[2]);
     //auto *list(reinterpret_cast<shared_ptr<canHitGeneric> *>(new canHitGeneric *[2]));
     //shared_ptr<canHitGeneric> **list(new canHitGeneric*[2]);
     int i = 0;
-    shared_ptr<texture> cT(new constantTexture(vec3(1.0, 0.0, 0.0)));
-    shared_ptr<material> red(new diffuseMaterial_Lambertian(cT));
+    shared_ptr <texture> cT(new constantTexture(vec3(1.0, 0.0, 0.0)));
+    shared_ptr <material> red(new diffuseMaterial_Lambertian(cT));
     //shared_ptr<canHitGeneric> tr(new triangleCanHit(vec3(0, 0, -1), vec3(4, 0, -1), vec3(2, 2, -1), &red));
 
     //THIS BELOW LEAKS MEMORY - Change to 1280x640 to see Red Triangle being rendered, if uncommented.
     //Change to 20x10 for Valgrind, otherwise it's way too slow.
-    list[i++] = new translate(new triangleCanHit(vec3(0, 0, -1), vec3(4, 0, -1), vec3(2, 2, -1), red),vec3(278,278,0));
-   //ONLY TRY USING THE TRIANGLECANHIT, SPHERE ISN'T DONE, I THINK?
-   //LIST NEEDS TO BE A shared_ptr otherwise it leaks memory
-   //Got stuck here
+    list[i++] = new translate(new triangleCanHit(vec3(0, 0, -1), vec3(4, 0, -1), vec3(2, 2, -1), red),
+                              vec3(278, 278, 0));
+    //ONLY TRY USING THE TRIANGLECANHIT, SPHERE ISN'T DONE, I THINK?
+    //LIST NEEDS TO BE A shared_ptr otherwise it leaks memory
+    //Got stuck here
 
 //    list[i++] = new sphereCanHit(vec3(0, 0, -1), 0.5,
 //                                 new diffuseMaterial_Lambertian(new constantTexture(vec3(0.1, 0.2, 0.5))));
@@ -420,10 +421,12 @@ int main() {
 
     myfile << "P3\n" << nx << " " << ny << "\n255\n";
 
-    canHitGeneric *world = makeTriangleScene();
-    //makeBunny();//cornellHotBox2();
+    canHitGeneric *world =
+//            makeTriangleScene();
+            //makeBunny();//cornellHotBox2();
 //            makeBunny();
-//            makeTriangleScene();//cornellBox();//cornellLotsOfSpheres();//cornellHotBox();//cornellBox();//randomSceneGen();
+//            makeTriangleScene();//cornellBox();//cornellLotsOfSpheres();//cornellHotBox();//cornellBox();
+            randomSceneGen();
     //camera(float vFOV, float aspect, vec3 lookFrom, vec3 lookAt, vec3 vUp, aperture, focus_dist)
 
 
