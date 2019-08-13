@@ -8,11 +8,13 @@
 #include "material.h"
 #include "texture.h"
 
+//A Material that is uniform in every direction
 class isotrophic: public material{
 public:
     isotrophic(texture *a){
         albedo = a;
     }
+    //Picks a random uniform direction and loads the generated data
     bool scatter(const ray& r_in, const hit_record& rec, vec3& attenuation, ray& scattered) const override{
         scattered = ray(rec.p,random_in_unit_sphere());
         attenuation = albedo->value(rec.u,rec.v,rec.p);

@@ -7,6 +7,8 @@
 
 #include "vec3.h"
 
+//Base class for the concept of a texture, different types of textures can be created, from a simple
+//RGB based one, to one loaded from a PPM file.
 class texture {
 public:
     virtual ~texture() {}

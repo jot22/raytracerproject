@@ -12,6 +12,7 @@
 #include "yzRectangleCanHit.h"
 #include "canHitGenericList.h"
 
+//A Class to Purely create a Rectangular 6 Sided 3D Box.
 class boxCanHit: public canHitGeneric{
 public:
     boxCanHit(){}
@@ -25,10 +26,12 @@ public:
     vec3 pMin, pMax;
 };
 
+//Checks if a ray of light hits the generated box or not
 bool boxCanHit::hit(const ray &r, float t_min, float t_max, hit_record &rec) const {
     return lPtr->hit(r,t_min,t_max,rec);
 }
 
+//Creates the 6 Sided Rectangular Box
 boxCanHit::boxCanHit(const vec3 &p0, const vec3 &p1, material *ptr) {
     pMax = p1;
     pMin = p0;

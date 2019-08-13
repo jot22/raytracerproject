@@ -8,6 +8,7 @@
 #include <cfloat>
 #include "canHitGeneric.h"
 
+//Rotates a canHitGeneric object about the Y-Axis
 class rotateY : public canHitGeneric {
 public:
     rotateY(canHitGeneric *p, float angle);

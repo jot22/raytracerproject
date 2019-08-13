@@ -7,6 +7,9 @@
 
 #include "texture.h"
 
+//Stretches over a supplied char of pixel data, over a given texture size, A and B (Width and Height).
+//Used in our project for loading in a PPM file, and texturing that over a selected object.
+//Can also be used for any other type of ingested data, so long as it is converted into a char array of data
 class imageTexture: public texture{
 public:
     imageTexture() = default;
@@ -21,6 +24,7 @@ public:
     int nx, ny;
 };
 
+//Calculates where each of the ingested array pixel data value goes into the UV coordinate space
 vec3 imageTexture::value(float u, float v,const vec3& p) const{
     auto i = static_cast<int>((u) * nx);
     auto j = static_cast<int>((1 - v) * ny - 0.001);

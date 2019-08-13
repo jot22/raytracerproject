@@ -1,1 +1,4 @@
-Visual Studio not found at: C:\Program Files (x86)\Microsoft Visual Studio\2017\Community Configure
+/home/ap/Downloads/clion-2018.3.3/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/ap/Desktop/finalWinRepo/finalproject-jt-atanas
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/cmake-build-debug

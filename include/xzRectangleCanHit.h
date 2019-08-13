@@ -7,6 +7,8 @@
 
 #include "canHitGeneric.h"
 
+//Like a regular rectangle canHitGeneric sub-object, but on the basis of X-Z positioning.
+
 class xzRectangleCanHit: public canHitGeneric{
 public:
     xzRectangleCanHit(){}

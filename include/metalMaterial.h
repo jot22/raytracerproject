@@ -7,6 +7,9 @@
 
 #include "material.h"
 
+//Creates an approximation for a Metal material.
+//The color of the metal can be selected, as well as how "smooth" the metal is, or bumpy.
+//"f" value of 0.0 means no fuzziness, 1.0 means the most fuzzy look.
 class metalMaterial : public material {
 public:
     metalMaterial(texture *a, float f) : albedo(a) {

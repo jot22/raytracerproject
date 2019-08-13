@@ -7,6 +7,7 @@
 
 #include "texture.h"
 
+//Creates a checkerboard pattern texture that can be applied to any Material class
 class checkerBoardTexture: public texture{
 public:
     checkerBoardTexture() = default;
@@ -16,6 +17,7 @@ public:
         even = t0;
     }
 
+    //Calculates which square of the checkerboard should be which color, two colors are supported
     vec3 value(float u, float v, const vec3 &p) const override {
         float sines = sin(10*p.x())*sin(10*p.y())*sin(10*p.z());
         if(sines < 0){

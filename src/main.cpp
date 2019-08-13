@@ -453,8 +453,8 @@ int main() {
     myfile.open("test.ppm");
 
     //Size
-    int nx = 1280;
-    int ny = 640;
+    int nx = 20;
+    int ny = 10;
     //Anti-Aliasing Samples, Higher = Better = Slower
     //Higher Resolution means lower ns value is needed.
     int ns = 1;

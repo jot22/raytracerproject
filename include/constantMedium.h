@@ -10,6 +10,8 @@
 #include "texture.h"
 #include "isotrophic.h"
 
+//Creates a "Foggy" canHitGeneric sub-object, in other words a "volume" object, rather than one made of a "solid" material,
+//such as metal, glass, etc.
 class constantMedium : public canHitGeneric {
 public:
     constantMedium(canHitGeneric *b, float d, texture *a) {
@@ -29,7 +31,7 @@ public:
 };
 
 #endif //RAYTRACER_CONSTANTMEDIUM_H
-
+//Calculates whether a ray of light hits the foggy object or not.
 bool constantMedium::hit(const ray &r, float t_min, float t_max, hit_record &rec) const {
     bool db = ((rand() / (RAND_MAX + 1.0)) < 0.00001);
     db = false;

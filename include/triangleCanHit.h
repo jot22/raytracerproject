@@ -8,6 +8,8 @@
 #include <tgmath.h>
 #include "canHitGeneric.h"
 
+//Creates a triangle sub-object of the type canHitGeneric
+//Useful as the base primitive object when loading OBJ files, as they're based on the Triangle primitive.
 class triangleCanHit : public canHitGeneric {
 public:
     triangleCanHit() {}
@@ -33,6 +35,7 @@ public:
     material *mat;
 };
 
+//Checks whether a ray of light hits a Triangle or not.
 bool triangleCanHit::hit(const ray &r, float t_min, float t_max, hit_record &rec) const {
     float epsilon = 0.0000001f;
 
@@ -64,6 +67,7 @@ bool triangleCanHit::hit(const ray &r, float t_min, float t_max, hit_record &rec
 
 }
 
+//Places a bounding box around the triangle and checks for intersection
 bool triangleCanHit::bounding_box(float t0, float t1, aabb &box) const {
     float minx = min(min(face0.x(), face1.x()), face2.x());
     float miny = min(min(face0.y(), face1.y()), face2.y());

@@ -7,6 +7,9 @@
 
 #include "canHitGeneric.h"
 
+//Creates a rectangle sub-object of the type canHitGeneric
+//On the basis of X-Y positioning.
+
 class rectangleCanHit : public canHitGeneric {
 public:
     rectangleCanHit() {}
@@ -37,6 +40,7 @@ public:
 
 };
 
+//Checks whether or not a ray of light hits the rectangle or not
 bool rectangleCanHit::hit(const ray &r, float t_min, float t_max, hit_record &rec) const {
     float t = (k - r.origin().z()) / r.direction().z();
     if (t < t_min || t > t_max) {

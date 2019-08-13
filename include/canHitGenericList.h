@@ -7,6 +7,7 @@
 
 #include "canHitGeneric.h"
 
+//A Class that Holds a List of canHitGeneric sub-objects, basically a container for Hittable Objects.
 class canHitGenericList : public canHitGeneric {
 public:
     canHitGenericList() = default;
@@ -31,6 +32,7 @@ public:
     int list_size;
 };
 
+//Goes through every sub-object and calculates the bounding box for them
 bool canHitGenericList::bounding_box(float t0, float t1, aabb &box) const {
     if (list_size < 1) {
         return false;
@@ -54,6 +56,7 @@ bool canHitGenericList::bounding_box(float t0, float t1, aabb &box) const {
     return true;
 }
 
+//Checks whether a ray of light hits each sub-object in the list individually
 bool canHitGenericList::hit(const ray &r, float tMin, float tMax, hit_record &rec) const {
     hit_record temp_rec;
     bool hasHit = false;

@@ -7,6 +7,7 @@
 
 #include "canHitGeneric.h"
 
+//A type of sub-object that simply has it's normals flipped, normal = -normal of the incoming sub-object.
 class flipNormals: public canHitGeneric{
 public:
     flipNormals(){}

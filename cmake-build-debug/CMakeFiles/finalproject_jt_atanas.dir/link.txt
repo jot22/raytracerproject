@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/finalproject_jt_atanas.dir/src/main.cpp.o CMakeFiles/finalproject_jt_atanas.dir/src/obj.cpp.o ../bunny_centered.obj ../c.obj  -o finalproject_jt_atanas 

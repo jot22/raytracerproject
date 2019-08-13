@@ -9,7 +9,8 @@ struct hit_record;
 
 #include "canHitGeneric.h"
 
-
+//Base class for which every canHitGeneric objects intakes. This is the "skin" of every canHitGeneric object.
+//Can be anything from a Metal, to Glass, to a PPM loaded Texture.
 class material {
 public:
 
@@ -17,6 +18,7 @@ public:
 
     virtual bool scatter(const ray &r_in, const hit_record &rec, vec3 &attenuation, ray &scattered) const = 0;
 
+    //By default, no Material emits any light
     virtual vec3 emitted(float u, float v, const vec3 &p) const {
         return {0, 0, 0};
     }
