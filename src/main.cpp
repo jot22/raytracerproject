@@ -510,7 +510,7 @@ int main() {
                 float v = float(j + (rand() / (RAND_MAX + 1.0))) / float(ny);
                 ray r = cam.get_ray(u, v);
                 //vec3 p = r.point_at_param(2.0);
-//                col += color(r, world, 0); ****************
+                col += color(r, world, 0);
 
             }
             col /= float(ns);
@@ -531,7 +531,7 @@ int main() {
 
     myfile.close();
 
-//    delete world; ****************
+    delete world;
 
     return 0;
 }
