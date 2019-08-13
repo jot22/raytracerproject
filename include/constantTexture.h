@@ -11,9 +11,9 @@ class constantTexture : public texture {
 public:
     constantTexture() = default;
 
-    ~constantTexture() {}
-
     explicit constantTexture(vec3 c) : color(c) {}
+
+    ~constantTexture() {}
 
     vec3 value(float u, float v, const vec3 &p) const override {
         return color;

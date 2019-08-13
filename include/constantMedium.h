@@ -18,9 +18,14 @@ public:
         phaseFunc = new isotrophic(a);
     }
 
+    ~constantMedium() {
+        delete phaseFunc;
+    }
+
     bool hit(const ray &r, float t_min, float t_max, hit_record &rec) const override;
-    bool bounding_box(float t0,float t1, aabb& box) const override{
-        return boundary->bounding_box(t0,t1,box);
+
+    bool bounding_box(float t0, float t1, aabb &box) const override {
+        return boundary->bounding_box(t0, t1, box);
     }
 
     canHitGeneric *boundary;
@@ -57,7 +62,7 @@ bool constantMedium::hit(const ray &r, float t_min, float t_max, hit_record &rec
                 if (db) std::cerr << "\n";
                 rec.t = rec1.t + hitDist / r.direction().length();
                 rec.p = r.point_at_param(rec.t);
-                rec.normal = vec3(1,0,0);
+                rec.normal = vec3(1, 0, 0);
                 rec.mat_ptr = phaseFunc;
                 return true;
             }

@@ -7,11 +7,15 @@
 
 #include "canHitGeneric.h"
 
-class translate: public canHitGeneric{
+class translate : public canHitGeneric {
 public:
-    translate(canHitGeneric *p, const vec3& displacement){
+    translate(canHitGeneric *p, const vec3 &displacement) {
         ptr = p;
         offset = displacement;
+    }
+
+    ~translate() {
+        delete ptr;
     }
 
     bool bounding_box(float t0, float t1, aabb &box) const override;
@@ -23,17 +27,17 @@ public:
 };
 
 bool translate::hit(const ray &r, float t_min, float t_max, hit_record &rec) const {
-    ray moved_r(r.origin()-offset,r.direction(),r.time());
-    if(ptr->hit(moved_r,t_min,t_max,rec)){
-        rec.p+=offset;
+    ray moved_r(r.origin() - offset, r.direction(), r.time());
+    if (ptr->hit(moved_r, t_min, t_max, rec)) {
+        rec.p += offset;
         return true;
     }
     return false;
 }
 
 bool translate::bounding_box(float t0, float t1, aabb &box) const {
-    if(ptr->bounding_box(t0,t1,box)){
-        box = aabb(box.min()+offset,box.max()+offset);
+    if (ptr->bounding_box(t0, t1, box)) {
+        box = aabb(box.min() + offset, box.max() + offset);
         return true;
     }
     return false;

@@ -12,6 +12,10 @@ class rotateY : public canHitGeneric {
 public:
     rotateY(canHitGeneric *p, float angle);
 
+    ~rotateY() {
+        delete ptr;
+    }
+
     bool bounding_box(float t0, float t1, aabb &box) const override {
         box = bBox;
         return hasBox;

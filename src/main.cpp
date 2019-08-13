@@ -264,7 +264,7 @@ canHitGeneric *cornellHotBox2() {
 
     list[i++] = new flipNormals(new yzRectangleCanHit(0, 555, 0, 555, 555, green));
     list[i++] = new yzRectangleCanHit(0, 555, 0, 555, 0, red);
-    list[i++] = new xzRectangleCanHit(113, 443, 127, 432, 554, light);
+    list[i++] = new xzRectangleCanHit(213, 343, 227, 332, 554, light);
     list[i++] = new flipNormals(new xzRectangleCanHit(0, 555, 0, 555, 555, white));
     list[i++] = new xzRectangleCanHit(0, 555, 0, 555, 0, white);
     list[i++] = new flipNormals(new rectangleCanHit(0, 555, 0, 555, 555, white));
@@ -450,14 +450,14 @@ canHitGeneric *makeBunny() {
 
 int main() {
     ofstream myfile;
-    myfile.open("test.ppm");
+    myfile.open("temptest.ppm");
 
     //Size
     int nx = 1280;
     int ny = 640;
     //Anti-Aliasing Samples, Higher = Better = Slower
     //Higher Resolution means lower ns value is needed.
-    int ns = 1;
+    int ns = 1000;
 
 
     //std::cout<<a->getHeight();
@@ -487,8 +487,8 @@ int main() {
     vec3 lookAt(278, 278, 0);
     float dist_to_focus = 10.0;//(lookFrom-lookAt).length();
     float aperture = 0.0;
-//    int vFOV = 40;
-    int vFOV = 20;
+    int vFOV = 40;
+//    int vFOV = 20;
 
 //    camera cam = makeCameraTri(vFOV, float(nx) / float(ny), vec3(0, 1, 0), aperture, dist_to_focus);
     camera cam(vFOV, float(nx) / float(ny), lookFrom, lookAt, vec3(0, 1, 0), aperture, dist_to_focus, 0.0, 1.0);

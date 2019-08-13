@@ -7,22 +7,28 @@
 
 #include "texture.h"
 
-class checkerBoardTexture: public texture{
+class checkerBoardTexture : public texture {
 public:
     checkerBoardTexture() = default;
 
-    checkerBoardTexture(texture *t0,texture *t1){
+    checkerBoardTexture(texture *t0, texture *t1) {
         odd = t1;
         even = t0;
     }
 
-    vec3 value(float u, float v, const vec3 &p) const override {
-        float sines = sin(10*p.x())*sin(10*p.y())*sin(10*p.z());
-        if(sines < 0){
-            return odd->value(u,v,p);
-        }
-        return even->value(u,v,p);
+    ~checkerBoardTexture() {
+        delete odd;
+        delete even;
     }
+
+    vec3 value(float u, float v, const vec3 &p) const override {
+        float sines = sin(10 * p.x()) * sin(10 * p.y()) * sin(10 * p.z());
+        if (sines < 0) {
+            return odd->value(u, v, p);
+        }
+        return even->value(u, v, p);
+    }
+
     texture *odd;
     texture *even;
 };

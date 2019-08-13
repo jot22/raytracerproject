@@ -13,6 +13,9 @@ public:
 
     sphereCanHit(vec3 cen, float r, material *m) : center(cen), radius(r), mat_ptr(m) {};
 
+    ~sphereCanHit() {
+        delete mat_ptr;
+    }
 
     bool hit(const ray &r, float tMin, float tMax, hit_record &rec) const override;
 
