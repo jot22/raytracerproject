@@ -12,68 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d96c5acb-77f1-4a0c-b0d2-ab56ebc49346" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.3/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.3/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.3/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.3/CMakeRCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.3/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.3/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.3/CompilerIdC/a.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.3/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.3/CompilerIdCXX/a.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rayTracerProject.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rayTracerProject.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rayTracerProject.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rayTracerProject.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rayTracerProject.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rayTracerProject.dir/includes_CXX.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rayTracerProject.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rayTracerProject.dir/linklibs.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rayTracerProject.dir/objects1.rsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rayTracerProject.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/OBJ.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/OBJ.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/aabb.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/aabb.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/boxCanHit.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/boxCanHit.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/bvhNode.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/bvhNode.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/camera.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/camera.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/canHitGeneric.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/canHitGeneric.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/canHitGenericList.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/canHitGenericList.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/checkerBoardTexture.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/checkerBoardTexture.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/constantMedium.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/constantMedium.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/constantTexture.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/constantTexture.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/dielectricMaterial.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/dielectricMaterial.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/diffuseLightMaterial.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/diffuseLightMaterial.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/diffuseMaterial_Lambertian.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/diffuseMaterial_Lambertian.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/flipNormals.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/flipNormals.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/imageTexture.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/imageTexture.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/isotrophic.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/isotrophic.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/material.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/material.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/metalMaterial.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/metalMaterial.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/ray.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/ray.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/rectangleCanHit.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/rectangleCanHit.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/rotateY.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/rotateY.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/sphereCanHit.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/sphereCanHit.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/texture.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/texture.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/translate.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/translate.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/triangleCanHit.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/triangleCanHit.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/vec3.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/vec3.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/obj.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.ppm" beforeDir="false" afterPath="$PROJECT_DIR$/test.ppm" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -88,11 +27,20 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/include/ray.h">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="95" selection-start-line="9" selection-start-column="95" selection-end-line="9" selection-end-column="95" />
+            <state relative-caret-position="270">
+              <caret line="342" column="13" lean-forward="true" selection-start-line="342" selection-start-column="13" selection-end-line="342" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/obj.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="517">
+              <caret line="188" lean-forward="true" selection-start-line="188" selection-end-line="188" />
             </state>
           </provider>
         </entry>
@@ -100,8 +48,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/rectangleCanHit.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="40" column="64" selection-start-line="40" selection-start-column="64" selection-end-line="40" selection-end-column="64" />
+            <state relative-caret-position="150">
+              <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -110,16 +58,7 @@
         <entry file="file://$PROJECT_DIR$/include/rotateY.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="492">
-              <caret line="83" column="5" lean-forward="true" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/include/sphereCanHit.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="58" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
+              <caret line="83" column="5" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -163,13 +102,19 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/xzRectangleCanHit.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-393" />
+            <state relative-caret-position="135">
+              <caret line="9" column="75" selection-start-line="9" selection-start-column="75" selection-end-line="9" selection-end-column="75" />
+            </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/yzRectangleCanHit.h">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="15" selection-start-line="8" selection-end-line="9" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -208,7 +153,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main.cpp" />
         <option value="$PROJECT_DIR$/include/OBJ.h" />
         <option value="$PROJECT_DIR$/src/obj.cpp" />
         <option value="$PROJECT_DIR$/include/aabb.h" />
@@ -230,13 +174,16 @@
         <option value="$PROJECT_DIR$/include/metalMaterial.h" />
         <option value="$PROJECT_DIR$/include/ppmLoader.h" />
         <option value="$PROJECT_DIR$/include/ray.h" />
-        <option value="$PROJECT_DIR$/include/rectangleCanHit.h" />
         <option value="$PROJECT_DIR$/include/rotateY.h" />
         <option value="$PROJECT_DIR$/include/sphereCanHit.h" />
         <option value="$PROJECT_DIR$/include/texture.h" />
         <option value="$PROJECT_DIR$/include/translate.h" />
         <option value="$PROJECT_DIR$/include/triangleCanHit.h" />
         <option value="$PROJECT_DIR$/include/vec3.h" />
+        <option value="$PROJECT_DIR$/include/yzRectangleCanHit.h" />
+        <option value="$PROJECT_DIR$/include/xzRectangleCanHit.h" />
+        <option value="$PROJECT_DIR$/include/rectangleCanHit.h" />
+        <option value="$PROJECT_DIR$/src/main.cpp" />
       </list>
     </option>
   </component>
@@ -345,12 +292,12 @@
       <workItem from="1565369802481" duration="5254000" />
       <workItem from="1565619139480" duration="6007000" />
       <workItem from="1565649546119" duration="6751000" />
-      <workItem from="1565672301440" duration="4352000" />
+      <workItem from="1565672301440" duration="4819000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46074000" />
+    <option name="totallyTimeSpent" value="46541000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="0" width="1374" height="736" extended-state="6" />
@@ -384,13 +331,6 @@
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/obj.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2760">
-          <caret line="188" lean-forward="true" selection-start-line="188" selection-end-line="188" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/bvhNode.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1770">
@@ -409,13 +349,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="267">
           <caret line="46" column="35" lean-forward="true" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="717">
-          <caret line="475" column="12" selection-start-line="475" selection-start-column="12" selection-end-line="475" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -544,13 +477,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/rectangleCanHit.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" column="64" selection-start-line="40" selection-start-column="64" selection-end-line="40" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/sphereCanHit.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -568,7 +494,7 @@
     <entry file="file://$PROJECT_DIR$/include/rotateY.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="492">
-          <caret line="83" column="5" lean-forward="true" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
+          <caret line="83" column="5" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -593,13 +519,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/xzRectangleCanHit.h">
+    <entry file="file://$PROJECT_DIR$/include/yzRectangleCanHit.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-393" />
+        <state relative-caret-position="120">
+          <caret line="8" column="15" selection-start-line="8" selection-end-line="9" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/yzRectangleCanHit.h">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/include/xzRectangleCanHit.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="75" selection-start-line="9" selection-start-column="75" selection-end-line="9" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/rectangleCanHit.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/obj.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="188" lean-forward="true" selection-start-line="188" selection-end-line="188" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="342" column="13" lean-forward="true" selection-start-line="342" selection-start-column="13" selection-end-line="342" selection-end-column="13" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
