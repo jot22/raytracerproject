@@ -425,10 +425,10 @@ camera makeCameraBox(float vFOV, float wH, vec3 z, float aperture, float distToF
 
 
 canHitGeneric *makeTriangleScene() {
-    auto **list = new canHitGeneric *[0];
+    auto **list = new canHitGeneric *[1];
     int i = 0;
-//    material *red = new diffuseMaterial_Lambertian(new constantTexture(vec3(0.65, 0.05, 0.05)));
-//    list[i++] = new triangleCanHit(vec3(0, 0, -1), vec3(4, 0, -1), vec3(2, 2, -1), red);
+    material *red = new diffuseMaterial_Lambertian(new constantTexture(vec3(0.65, 0.05, 0.05)));
+    list[i++] = new triangleCanHit(vec3(0, 0, -1), vec3(4, 0, -1), vec3(2, 2, -1), red);
 //    list[i++] = new sphereCanHit(vec3(0, 0, -1), 0.5,
 //                                 new diffuseMaterial_Lambertian(new constantTexture(vec3(0.1, 0.2, 0.5))));
     return new canHitGenericList(list, i);
