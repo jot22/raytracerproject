@@ -7,6 +7,7 @@
 
 #include "canHitGeneric.h"
 
+//Creates a spherical sub-object of the type canHitGeneric
 class sphereCanHit : public canHitGeneric {
 public:
     sphereCanHit() = default;

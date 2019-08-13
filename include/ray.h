@@ -7,6 +7,7 @@
 
 #include "vec3.h"
 
+//Base class for a ray of "light", provides getters and a calculation function for a point at t
 class ray {
 public:
     ray() = default;

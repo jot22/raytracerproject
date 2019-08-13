@@ -1,5 +1,6 @@
 #include <sstream>
 #include <OBJ.h>
+#include <ppmLoader.h>
 #include "canHitGeneric.h"
 #include "texture.h"
 #include "checkerBoardTexture.h"
@@ -129,74 +130,6 @@ vec3 color(const ray &r, canHitGeneric *world, int depth) {
 //    vec3 unit_dir = unit_vector(r.direction());
 //    float t = 0.5f * (unit_dir.y() + 1.0f);
 //    return (1.0 - t) * vec3(1.0, 1.0, 1.0) + t * vec3(0.5, 0.7, 1.0);
-
-
-}
-
-unsigned char *pix(const string &ppmFile, int &width, int &height) {
-    ifstream openFile;
-    openFile.open(ppmFile);
-    std::string eachLine;
-    int m_width, m_height, m_max;
-    unsigned char *m_PixelData;
-
-    if (!openFile.is_open()) {
-        std::cout << "Error Opening File ff";
-        exit(-1);
-    }
-    int count = 1;
-    int pixelArrPos = 0;
-    int scaleBy = 1;
-
-    while (getline(openFile, eachLine)) {
-
-        if (count < 4) {
-            if (eachLine[0] == '#') {
-                continue;
-            }
-            //Width, Height Grab
-            if (count == 2) {
-                string sizeArr[2];
-                stringstream tok(eachLine);
-                int sizeCount = 0;
-                while (tok.good() && sizeCount < 2) {
-                    tok >> sizeArr[sizeCount];
-                    sizeCount++;
-                }
-                m_width = std::stoi(sizeArr[0]);
-                m_height = std::stoi(sizeArr[1]);
-                m_PixelData = new unsigned char[m_width * m_height * 3];
-            }
-            //Scale up
-            if (count == 3) {
-                int maxValPreScale = stoi(eachLine);
-                scaleBy = 255 / std::stoi(eachLine);
-                m_max = maxValPreScale * scaleBy;
-            }
-            count++;
-        } else {
-            if (eachLine[0] == '#') {
-                continue;
-            }
-            stringstream tokRGB(eachLine);
-            while (tokRGB.good()) {
-                string temp;
-                tokRGB >> temp;
-
-                int k = std::stoi(temp) * scaleBy;
-
-
-                m_PixelData[pixelArrPos] = k;
-                pixelArrPos++;
-            }
-        }
-    }
-
-    openFile.close();
-    height = m_height;
-    width = m_width;
-    return m_PixelData;
-    //Do error handling if file is broken
 }
 
 canHitGeneric *cornellBox() {
@@ -341,7 +274,9 @@ canHitGeneric *randomSceneGen() {
     }
 
     int w, h;
-    unsigned char *pixx = pix("cap.ppm", w, h);
+    ppmLoader loadPPM{};
+
+    unsigned char *pixx = loadPPM.pix("cap.ppm", w, h);
     std::cout << w << " " << h << "\n";
 
     list[i++] = new sphereCanHit(vec3(0, 1, 0), 1.0, new dielectricMaterial(1.5));
@@ -394,13 +329,15 @@ canHitGeneric *cornellLotsOfSpheres() {
 
 
     int w, h;
-    unsigned char *pixx = pix("cap.ppm", w, h);
+    ppmLoader loadPPM{};
+
+    unsigned char *pixx = loadPPM.pix("cap.ppm", w, h);
     auto *emat = new diffuseMaterial_Lambertian(new imageTexture(pixx, w, h));
 
 
     list[l++] = new sphereCanHit(vec3(400, 200, 400), 100, emat);
 
-    pixx = pix("w.ppm", w, h);
+    pixx = loadPPM.pix("w.ppm", w, h);
     emat = new diffuseMaterial_Lambertian(new imageTexture(pixx, w, h));
     list[l++] = new sphereCanHit(vec3(220, 280, 300), 80, emat);
     int ns = 1000;
@@ -453,8 +390,8 @@ int main() {
     myfile.open("temptest.ppm");
 
     //Size
-    int nx = 1280;
-    int ny = 640;
+    int nx = 20;
+    int ny = 10;
     //Anti-Aliasing Samples, Higher = Better = Slower
     //Higher Resolution means lower ns value is needed.
     int ns = 1000;

@@ -7,7 +7,7 @@
 
 #include "ray.h"
 
-
+//Abstracts all Camera functionality in this class, handling view location, view position, aperture, field of view and such.
 class camera {
 public:
     camera(float vFOV,
@@ -46,6 +46,7 @@ public:
         //origin = vec3(0.0, 0.0, 0.0);
     }
 
+    //Calculates a Ray, given all supplied inputs
     ray get_ray(float u, float v) {
         vec3 rd = lens_radius*random_in_unit_disk();
         vec3 offset = uU*rd.x()+vV*rd.y();
@@ -64,6 +65,7 @@ public:
     float time0, time1;
 
 private:
+    //Helps randomly generate a ray of light, for our motion blur feature.
     const vec3 random_in_unit_disk() {
         vec3 p;
         do {

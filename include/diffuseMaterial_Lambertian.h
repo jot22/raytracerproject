@@ -8,6 +8,8 @@
 #include "material.h"
 #include "texture.h"
 
+//Creates a "matte" style material.
+//https://en.wikipedia.org/wiki/Lambertian_reflectance
 class diffuseMaterial_Lambertian : public material {
 public:
     explicit diffuseMaterial_Lambertian(texture *a) : albedo(a) {}

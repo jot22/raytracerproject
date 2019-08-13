@@ -8,6 +8,8 @@
 #include "material.h"
 #include "texture.h"
 
+//Creates a material that emits light, rather than absorbing it.
+//Useful for creating a point of light, a lamp, a ceiling light, etc
 class diffuseLightMaterial : public material {
 public:
     diffuseLightMaterial() {}

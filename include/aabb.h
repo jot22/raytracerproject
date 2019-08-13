@@ -16,7 +16,9 @@ inline float ffmax(float a, float b) {
     return a > b ? a : b;
 }
 
-
+/**
+ * An Axis-Aligned Bounding Box Class (AABB)
+ */
 class aabb {
 public:
     aabb() = default;
@@ -34,6 +36,7 @@ public:
         return _max;
     }
 
+    //Calculates if a ray of light hits or not inside the AABB
     bool hit(const ray &r, float tMin, float tMax) const {
         for (int a = 0; a < 3; a++) {
             float t0Min = (_min[a] - r.origin()[a]) / r.direction()[a];
@@ -55,6 +58,7 @@ public:
     vec3 _max;
 };
 
+//Calculates the Surrounding Box for the AABB.
 aabb surrounding_box(aabb box0, aabb box1) {
     vec3 small(fmin(box0.min().x(), box1.min().x()),
                fmin(box0.min().y(), box1.min().y()),

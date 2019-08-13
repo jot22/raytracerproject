@@ -10,6 +10,8 @@
 
 using namespace std;
 
+//A Class that allows for the ability to render many,many objects with good performance
+//Affords a huge speed up for scenes with many objects, may be slower with few objects
 class bvhNode : public canHitGeneric {
 public:
     bvhNode() = default;
@@ -35,6 +37,7 @@ bool bvhNode::bounding_box(float t0, float t1, aabb &box) const {
     return true;
 }
 
+//Checks if a ray of light hits the bounding box or not, Splits into two parts, a left and right
 bool bvhNode::hit(const ray &r, float t_min, float t_max, hit_record &rec) const {
     if (boxX.hit(r, t_min, t_max)) {
         hit_record left_rec, right_rec;
@@ -59,6 +62,7 @@ bool bvhNode::hit(const ray &r, float t_min, float t_max, hit_record &rec) const
     return false;
 }
 
+//Compares the Bounding Box in the X-Axis
 int box_x_compare(const void *a, const void *b) {
     aabb box_left, box_right;
     canHitGeneric *ah = *(canHitGeneric **) a;
@@ -74,6 +78,7 @@ int box_x_compare(const void *a, const void *b) {
 
 }
 
+//Compares the Bounding Box in the Y-Axis
 int box_y_compare(const void *a, const void *b) {
     aabb box_left, box_right;
     canHitGeneric *ah = *(canHitGeneric **) a;
@@ -88,6 +93,8 @@ int box_y_compare(const void *a, const void *b) {
     return 1;
 }
 
+
+//Compares the Bounding Box in the Z-Axis
 int box_z_compare(const void *a, const void *b) {
     aabb box_left, box_right;
     canHitGeneric *ah = *(canHitGeneric **) a;
@@ -102,6 +109,8 @@ int box_z_compare(const void *a, const void *b) {
     return 1;
 }
 
+//Randomly chooses an axis
+//Sorts the passed in canHitGeneric and puts each half in each subtree
 bvhNode::bvhNode(canHitGeneric **l, int n, float time0, float time1) {
     int axis = int(3 * (rand() / (RAND_MAX + 1.0)));
     if (axis == 0) {

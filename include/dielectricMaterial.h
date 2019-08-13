@@ -7,6 +7,10 @@
 
 #include "material.h"
 
+//Creates a di-electric material, basically anything from water, to glass, to an approximation of diamond.
+//The type of di-electric material is determined by the refractive index value passed in.
+//Glass = ~1.5
+//Diamond = ~2.42
 class dielectricMaterial : public material {
 public:
     explicit dielectricMaterial(float rI) : ref_idx(rI) {}
@@ -53,10 +57,12 @@ public:
 
     float ref_idx;
 private:
+    //What happens if a ray of light reflects off the object.
     vec3 reflect(const vec3 &v, const vec3 &n) const {
         return v - 2 * dot(v, n) * n;
     }
 
+    //What happens if a ray of light refracts off the object.
     bool refract(const vec3 &v, const vec3 &n, float ni_over_nt, vec3 &refracted) const {
         vec3 uv = unit_vector(v);
         float dt = dot(uv, n);
@@ -68,6 +74,8 @@ private:
         return false;
     }
 
+    //An efficient way of approximating the specular reflection coefficient
+    //https://en.wikipedia.org/wiki/Schlick%27s_approximation
     float schlick(float cosine, float ref_idx) const {
         float r0 = (1.0f - ref_idx) / (1.0f + ref_idx);
         r0 = r0 * r0;

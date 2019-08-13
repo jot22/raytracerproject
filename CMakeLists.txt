@@ -1,17 +1,11 @@
-cmake_minimum_required(VERSION 3.10)
-project(rayTracerProject)
+cmake_minimum_required(VERSION 3.13)
+project(finalproject_jt_atanas)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 14)
 
 include_directories(include)
 
-add_executable(rayTracerProject
-        .idea/codeStyles/Project.xml
-        .idea/misc.xml
-        .idea/modules.xml
-        .idea/rayTracerProject.iml
-        .idea/vcs.xml
-        .idea/workspace.xml
+add_executable(finalproject_jt_atanas
         cmake-build-debug/cmake_install.cmake
         cmake-build-debug/CMakeCache.txt
         cmake-build-debug/Makefile
@@ -47,13 +41,20 @@ add_executable(rayTracerProject
         src/main.cpp
         src/obj.cpp
         build.py
+        bunny_centered.obj
+        c.obj
         cap.ppm
         CMakeLists.txt
         cornell.ppm
         lab.exe
         out.ppm
         outVec.ppm
+        outVec1.ppm
+        outVec2.ppm
         outVecHQ.ppm
+        randomspheres.ppm
+        randomspheres1.ppm
         README.md
         SDL2.dll
-        w.ppm)
+        test.ppm
+        w.ppm include/ppmLoader.h)

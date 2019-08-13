@@ -8,6 +8,8 @@
 #include <cmath>
 #include <iostream>
 
+//A homemade vector class, featuring 3 parameters (RGB or XYZ in our case)
+//Provides every function required and expected of a Vector Class
 class vec3 {
 public:
     vec3() = default;

@@ -6,7 +6,7 @@
 #define RAYTRACER_YZRECTANGLECANHIT_H
 
 #include "canHitGeneric.h"
-
+//Like a regular rectangle canHitGeneric sub-object, but on the basis of Y-Z positioning.
 class yzRectangleCanHit : public canHitGeneric {
 public:
 

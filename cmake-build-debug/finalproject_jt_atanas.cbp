@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="finalproject_jt_atanas"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="finalproject_jt_atanas">
+				<Option output="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/cmake-build-debug/finalproject_jt_atanas" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/include"/>
+					<Add directory="/usr/include/c++/8"/>
+					<Add directory="/usr/include/c++/8/x86_64-suse-linux"/>
+					<Add directory="/usr/include/c++/8/backward"/>
+					<Add directory="/usr/lib64/gcc/x86_64-suse-linux/8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib64/gcc/x86_64-suse-linux/8/include-fixed"/>
+					<Add directory="/usr/lib64/gcc/x86_64-suse-linux/8/../../../../x86_64-suse-linux/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/cmake-build-debug/Makefile&quot;  VERBOSE=1 finalproject_jt_atanas"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="finalproject_jt_atanas/fast">
+				<Option output="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/cmake-build-debug/finalproject_jt_atanas" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/include"/>
+					<Add directory="/usr/include/c++/8"/>
+					<Add directory="/usr/include/c++/8/x86_64-suse-linux"/>
+					<Add directory="/usr/include/c++/8/backward"/>
+					<Add directory="/usr/lib64/gcc/x86_64-suse-linux/8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib64/gcc/x86_64-suse-linux/8/include-fixed"/>
+					<Add directory="/usr/lib64/gcc/x86_64-suse-linux/8/../../../../x86_64-suse-linux/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/cmake-build-debug/Makefile&quot;  VERBOSE=1 finalproject_jt_atanas/fast"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/CMakeLists.txt">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/README.md">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/SDL2.dll">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/build.py">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/bunny_centered.obj">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/c.obj">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/cap.ppm">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/cmake-build-debug/CMakeCache.txt">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/cmake-build-debug/Makefile">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/cmake-build-debug/cmake_install.cmake">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/cmake-build-debug/rayTracerProject.cbp">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/cornell.ppm">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/include/OBJ.h">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/include/aabb.h">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/include/boxCanHit.h">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/include/bvhNode.h">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/include/camera.h">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/include/canHitGeneric.h">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/include/canHitGenericList.h">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/include/checkerBoardTexture.h">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/include/constantMedium.h">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/include/constantTexture.h">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/include/dielectricMaterial.h">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/include/diffuseLightMaterial.h">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/include/diffuseMaterial_Lambertian.h">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/include/flipNormals.h">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/include/imageTexture.h">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/include/isotrophic.h">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/include/material.h">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/include/metalMaterial.h">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/include/ppmLoader.h">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/include/ray.h">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/include/rectangleCanHit.h">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/include/rotateY.h">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/include/sphereCanHit.h">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/include/texture.h">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/include/translate.h">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/include/triangleCanHit.h">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/include/vec3.h">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/include/xzRectangleCanHit.h">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/include/yzRectangleCanHit.h">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/lab.exe">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/out.ppm">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/outVec.ppm">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/outVec1.ppm">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/outVec2.ppm">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/outVecHQ.ppm">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/randomspheres.ppm">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/randomspheres1.ppm">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/src/main.cpp">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/src/obj.cpp">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/test.ppm">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/w.ppm">
+			<Option target="finalproject_jt_atanas"/>
+		</Unit>
+		<Unit filename="/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -7,6 +7,7 @@
 
 #include "texture.h"
 
+//Creates a texture based on supplied R-G-B values, single color only, stretched across at every point.
 class constantTexture : public texture {
 public:
     constantTexture() = default;
