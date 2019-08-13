@@ -473,18 +473,18 @@ int main() {
 
     //canHitGeneric *world = new canHitGenericList(list, 4);
     canHitGeneric *world =
-//            cornellHotBox2();
+            cornellHotBox2();
 //            makeBunny();
-            makeTriangleScene();
+//            makeTriangleScene();
 // cornellBox();//cornellLotsOfSpheres();//cornellHotBox();//cornellBox();
 //            randomSceneGen();
     //camera(float vFOV, float aspect, vec3 lookFrom, vec3 lookAt, vec3 vUp, aperture, focus_dist)
     //RandomScene Values
-    vec3 lookFrom(13, 2, 3);
-    vec3 lookAt(0, 0, 0);
+//    vec3 lookFrom(13, 2, 3);
+//    vec3 lookAt(0, 0, 0);
 
-//    vec3 lookFrom(278, 278, -800);
-//    vec3 lookAt(278, 278, 0);
+    vec3 lookFrom(278, 278, -800);
+    vec3 lookAt(278, 278, 0);
     float dist_to_focus = 10.0;//(lookFrom-lookAt).length();
     float aperture = 0.0;
 //    int vFOV = 40;
