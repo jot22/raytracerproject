@@ -2,7 +2,7 @@
 
 *TODO*: Please edit the following information in your assignment
 
-## https://youtu.be/gZ7dl9l7Y2M
+## Youtube video link: https://youtu.be/gZ7dl9l7Y2M
 
 * Name and partners name(At most teams of 3 folks total)
   * Team member 1: Joseph Triolo
