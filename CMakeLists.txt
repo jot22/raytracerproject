@@ -1,13 +1,22 @@
-cmake_minimum_required(VERSION 3.13)
+cmake_minimum_required(VERSION 3.10)
 project(finalproject_jt_atanas)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 11)
 
 include_directories(include)
 
 add_executable(finalproject_jt_atanas
+        .idea/codeStyles/Project.xml
+        .idea/.name
+        .idea/encodings.xml
+        .idea/misc.xml
+        .idea/modules.xml
+        .idea/rayTracerProject.iml
+        .idea/vcs.xml
+        .idea/workspace.xml
         cmake-build-debug/cmake_install.cmake
         cmake-build-debug/CMakeCache.txt
+        cmake-build-debug/finalproject_jt_atanas.cbp
         cmake-build-debug/Makefile
         cmake-build-debug/rayTracerProject.cbp
         include/aabb.h
@@ -28,6 +37,7 @@ add_executable(finalproject_jt_atanas
         include/material.h
         include/metalMaterial.h
         include/OBJ.h
+        include/ppmLoader.h
         include/ray.h
         include/rectangleCanHit.h
         include/rotateY.h
@@ -46,6 +56,7 @@ add_executable(finalproject_jt_atanas
         cap.ppm
         CMakeLists.txt
         cornell.ppm
+        lab
         lab.exe
         out.ppm
         outVec.ppm
@@ -57,4 +68,5 @@ add_executable(finalproject_jt_atanas
         README.md
         SDL2.dll
         test.ppm
-        w.ppm include/ppmLoader.h)
+        test1000.ppm
+        w.ppm)

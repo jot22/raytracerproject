@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/src/main.cpp" "/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/cmake-build-debug/CMakeFiles/finalproject_jt_atanas.dir/src/main.cpp.o"
-  "/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/src/obj.cpp" "/home/ap/Desktop/finalWinRepo/finalproject-jt-atanas/cmake-build-debug/CMakeFiles/finalproject_jt_atanas.dir/src/obj.cpp.o"
+  "C:/Users/ap/Desktop/graphicsFinal/finalproject-jt-atanas/src/main.cpp" "C:/Users/ap/Desktop/graphicsFinal/finalproject-jt-atanas/cmake-build-debug/CMakeFiles/finalproject_jt_atanas.dir/src/main.cpp.obj"
+  "C:/Users/ap/Desktop/graphicsFinal/finalproject-jt-atanas/src/obj.cpp" "C:/Users/ap/Desktop/graphicsFinal/finalproject-jt-atanas/cmake-build-debug/CMakeFiles/finalproject_jt_atanas.dir/src/obj.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

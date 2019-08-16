@@ -28,41 +28,6 @@
 
 using namespace std;
 
-//Normals are not enforced to be unit length
-
-
-
-
-
-//For a sphere centered at origin,
-//If R*R = x*x + y*y + z*z then (x,y,z) is on the sphere, otherwise it is not
-
-//For a sphere centered at (cx,cy,cz),
-//(x-cx)^2+(y-cy)^2+(z-cz)^2 = R^2
-
-//Chapter 4 Start, Math outlined
-//float hit_sphere(const vec3 &center, float radius, const ray &r) {
-//    vec3 oc = r.origin() - center;
-//    float a = dot(r.direction(), r.direction());
-//    float b = 2.0f * dot(oc, r.direction());
-//    float c = dot(oc, oc) - radius * radius;
-//    float discriminant = b * b - 4 * a * c;
-//
-//    if(discriminant < 0){
-//        return -1.0f;
-//    }
-//    return (-b-sqrt(discriminant)) / (2.0f*a);
-//}
-
-
-//Creating Diffuse Surface = Matte
-//vec3 random_in_unit_sphere(){
-//    vec3 p;
-//    do{
-//        p = 2.0f*vec3(drand48(),drand48(),drand48()) - vec3(1,1,1);
-//    }while(p.squared_length() >= 1.0);
-//    return p;
-//}
 
 vec3 rotateYAxis(vec3 vector, float angle) {
     angle = angle * (3.14159265359f / 180.0f);
@@ -101,35 +66,8 @@ vec3 color(const ray &r, canHitGeneric *world, int depth) {
         }
         return emitted;
     }
-    return {1, 1, 1}; //No lights in scene, Have to put your own
+    return {0, 0, 0}; //No lights in scene, Have to put your own
 
-    //Global Light
-//    vec3 unit_direction = unit_vector(r.direction());
-//    float t = 0.5f * (unit_direction.y() + 1.0f);
-//    return (1.0 - t) * vec3(1.0, 1.0, 1.0) + t * vec3(0.5, 0.7, 1.0);
-
-
-
-
-    //return attenuation* color(scattered, world, depth + 1);
-//        } else {
-//            return {0, 0, 0};
-//        }
-//    } else {
-//        vec3 unit_direction = unit_vector(r.direction());
-//        float t = 0.5f * (unit_direction.y() + 1.0f);
-//        return (1.0 - t) * vec3(1.0, 1.0, 1.0) + t * vec3(0.5, 0.7, 1.0);
-//    }
-
-    //    float tValue = hit_sphere(vec3(0, 0, -1), 0.5, r);
-//    if(tValue > 0.0){
-//        vec3 N = unit_vector(r.point_at_param(tValue) - vec3(0,0,-1));
-//        return 0.5f*vec3(N.x()+1.0f,N.y()+1.0f,N.z()+1.0f);
-//
-//    }
-//    vec3 unit_dir = unit_vector(r.direction());
-//    float t = 0.5f * (unit_dir.y() + 1.0f);
-//    return (1.0 - t) * vec3(1.0, 1.0, 1.0) + t * vec3(0.5, 0.7, 1.0);
 }
 
 canHitGeneric *cornellBox() {
@@ -187,7 +125,7 @@ canHitGeneric *cornellHotBox() {
 
 canHitGeneric *cornellHotBox2() {
     OBJ bunny("./bunny_centered.obj");
-    vector <vec3> bun = bunny.getFaceVertexVector();
+    vector<vec3> bun = bunny.getFaceVertexVector();
     auto **list = new canHitGeneric *[4 * bun.size() + 8];
     int i = 0;
     material *red = new diffuseMaterial_Lambertian(new constantTexture(vec3(0.65, 0.05, 0.05)));
@@ -373,7 +311,7 @@ canHitGeneric *makeTriangleScene() {
 
 canHitGeneric *makeBunny() {
     OBJ bunny("./bunny_centered.obj");
-    vector <vec3> bun = bunny.getFaceVertexVector();
+    vector<vec3> bun = bunny.getFaceVertexVector();
 //    std::cout << bun.size() << "\n";
     auto **list = new canHitGeneric *[bun.size()];
     material *red = new metalMaterial(new constantTexture(vec3(0.83, 0.686, 0.2156)), 0.0);
@@ -390,44 +328,21 @@ int main() {
     myfile.open("temptest.ppm");
 
     //Size
-    int nx = 20;
-    int ny = 10;
+    int nx = 1280; //Width
+    int ny = 640;  //Height
     //Anti-Aliasing Samples, Higher = Better = Slower
     //Higher Resolution means lower ns value is needed.
-    int ns = 1000;
+    int ns = 10;
 
-
-    //std::cout<<a->getHeight();
     myfile << "P3\n" << nx << " " << ny << "\n255\n";
 
-//    canHitGeneric *list[4];
-//    list[0] = new sphereCanHit(vec3(0, 0, -1), 0.5, new diffuseMaterial_Lambertian(vec3(0.1, 0.2, 0.5)));
-//    list[1] = new sphereCanHit(vec3(0, -100.5f, -1), 100, new metalMaterial(vec3(0.8, 0.6, 0.2),0.0));//new diffuseMaterial_Lambertian(vec3(0.8, 0.8, 0.0)));
-//    list[2] = new sphereCanHit(vec3(1, 0, -1), 0.5, new metalMaterial(vec3(0.8, 0.6, 0.2),0.0));
-//    list[3] = new sphereCanHit(vec3(-1, 0, -1),0.5, new metalMaterial(vec3(0.8, 0.6, 0.2),0.99));
-    //list[4] = new sphereCanHit(vec3(-1, 0, -1),-0.45f, new dielectricMaterial(1.5));
-
-
-    //canHitGeneric *world = new canHitGenericList(list, 4);
-    canHitGeneric *world =
-            cornellHotBox2();
-//            makeBunny();
-//            makeTriangleScene();
-// cornellBox();//cornellLotsOfSpheres();//cornellHotBox();//cornellBox();
-//            randomSceneGen();
-    //camera(float vFOV, float aspect, vec3 lookFrom, vec3 lookAt, vec3 vUp, aperture, focus_dist)
-    //RandomScene Values
-//    vec3 lookFrom(13, 2, 3);
-//    vec3 lookAt(0, 0, 0);
+    canHitGeneric *world = cornellHotBox2();
 
     vec3 lookFrom(278, 278, -800);
     vec3 lookAt(278, 278, 0);
-    float dist_to_focus = 10.0;//(lookFrom-lookAt).length();
+    float dist_to_focus = 10.0;
     float aperture = 0.0;
     int vFOV = 40;
-//    int vFOV = 20;
-
-//    camera cam = makeCameraTri(vFOV, float(nx) / float(ny), vec3(0, 1, 0), aperture, dist_to_focus);
     camera cam(vFOV, float(nx) / float(ny), lookFrom, lookAt, vec3(0, 1, 0), aperture, dist_to_focus, 0.0, 1.0);
 
     int timer = 0;
@@ -442,22 +357,14 @@ int main() {
         for (int i = 0; i < nx; i++) {
             vec3 col(0, 0, 0);
             for (int s = 0; s < ns; s++) {
-                //Implements Anti-Aliasing
                 float u = float(i + (rand() / (RAND_MAX + 1.0))) / float(nx);
                 float v = float(j + (rand() / (RAND_MAX + 1.0))) / float(ny);
                 ray r = cam.get_ray(u, v);
-                //vec3 p = r.point_at_param(2.0);
                 col += color(r, world, 0);
-
             }
             col /= float(ns);
             //Gamma Correction
             col = vec3(sqrt(col[0]), sqrt(col[1]), sqrt(col[2]));
-            //  vec3 col = color(r);
-            //vec3 col(float(i) / float(nx), float(j)/ float(ny),0.2);
-//            float r = float(i) / float(nx);
-//            float g = float(j) / float(ny);
-//            float b = 0.2;
             auto ir = int(255.99 * col[0]);
             auto ig = int(255.99 * col[1]);
             auto ib = int(255.99 * col[2]);
@@ -465,9 +372,7 @@ int main() {
         }
     }
     std::cout << ":::::::Render Complete:::::::\n";
-
     myfile.close();
-
     delete world;
 
     return 0;
