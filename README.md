@@ -8,7 +8,7 @@
   * Team member 1: Joseph Triolo
   * Team member 2: Atanas Pavlov
   * Team member 3: *edit this*
-* How many hours did it take you to complete this final project? 50
+* How many hours did it take you to complete this final project? 70
 * Did you collaborate or share ideas with any other students/TAs/Professors? Talked about Ray Tracing with Mike Shah.
 * Did you use any external resources? 
   * Note it is fair to utilize some tutorials--cite them here. You **must** add your own personal touch howeer!
