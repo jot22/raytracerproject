@@ -26,11 +26,31 @@ public:
         z1 = _z1;
         k = _k;
         mp = mat;
+        isBox = false;
+    }
+
+    //initializes yzrectangle with input values (box func)
+    yzRectangleCanHit(float _y0,
+                      float _y1,
+                      float _z0,
+                      float _z1,
+                      float _k,
+                      material *mat,
+                      bool iBox) {
+        y0 = _y0;
+        y1 = _y1;
+        z0 = _z0;
+        z1 = _z1;
+        k = _k;
+        mp = mat;
+        isBox = iBox;
     }
 
     //destructor for yzrectangle
     ~yzRectangleCanHit() {
-        delete mp;
+        if (!isBox) {
+            delete mp;
+        }
     }
 
     //determines if ray hits yzrectangle or not
@@ -45,6 +65,7 @@ public:
     //variables for yzrectangle
     material *mp;
     float y0, y1, z0, z1, k;
+    bool isBox;
 };
 
 //determines if ray hits yzrectangle or not

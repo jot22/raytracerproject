@@ -28,11 +28,31 @@ public:
         y1 = _y1;
         k = _k;
         mp = mat;
+        isBox = false;
+    }
+
+    //Initializes rectangleCanHit with input values (box func)
+    rectangleCanHit(float _x0,
+                    float _x1,
+                    float _y0,
+                    float _y1,
+                    float _k,
+                    material *mat,
+                    bool iBox) {
+        x0 = _x0;
+        x1 = _x1;
+        y0 = _y0;
+        y1 = _y1;
+        k = _k;
+        mp = mat;
+        isBox = iBox;
     }
 
     //Destructor for rectangleCanHit
     ~rectangleCanHit() {
-        delete mp;
+        if (!isBox) {
+            delete mp;
+        }
     }
 
     //determines if ray hits rectangle or not
@@ -47,7 +67,7 @@ public:
     //variables for rectangleCanHit
     material *mp;
     float x0, x1, y0, y1, k;
-
+    bool isBox;
 };
 
 //Checks whether or not a ray of light hits the rectangle or not
