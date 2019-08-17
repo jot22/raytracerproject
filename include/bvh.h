@@ -24,10 +24,10 @@ public:
     //Destructor for bvh
     ~bvh() {
         delete node;
-//        for (int i = 0; i < list_size; i++) {
-//            delete list[i];
-//        }
-        delete[] list;
+        for (int i = 0; i < list_size; i++) {
+            delete list[i];
+        }
+//        delete[] list;
     }
 
     //determines if ray hits bvh or not

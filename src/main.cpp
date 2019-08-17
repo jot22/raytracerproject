@@ -77,7 +77,14 @@ canHitGeneric *cornellBox() {
     auto **list = new canHitGeneric *[8];
     int i = 0;
     material *red = new diffuseMaterial_Lambertian(new constantTexture(vec3(0.65, 0.05, 0.05)));
+//    material *red2 = new diffuseMaterial_Lambertian(new constantTexture(vec3(0.65, 0.05, 0.05)));
     material *white = new diffuseMaterial_Lambertian(new constantTexture(vec3(0.73, 0.73, 0.73)));
+    material *white2 = new diffuseMaterial_Lambertian(new constantTexture(vec3(0.73, 0.73, 0.73)));
+    material *white3 = new diffuseMaterial_Lambertian(new constantTexture(vec3(0.73, 0.73, 0.73)));
+    material *white4 = new diffuseMaterial_Lambertian(new constantTexture(vec3(0.73, 0.73, 0.73)));
+    material *white5 = new diffuseMaterial_Lambertian(new constantTexture(vec3(0.73, 0.73, 0.73)));
+//    material *white6 = new diffuseMaterial_Lambertian(new constantTexture(vec3(0.73, 0.73, 0.73)));
+//    material *white7 = new diffuseMaterial_Lambertian(new constantTexture(vec3(0.73, 0.73, 0.73)));
     material *green = new diffuseMaterial_Lambertian(new constantTexture(vec3(0.12, 0.45, 0.15)));
     material *light = new diffuseLightMaterial(new constantTexture(vec3(15, 15, 15)));
 
@@ -85,18 +92,17 @@ canHitGeneric *cornellBox() {
     list[i++] = new yzRectangleCanHit(0, 555, 0, 555, 0, red);
     list[i++] = new xzRectangleCanHit(213, 343, 227, 332, 554, light);
     list[i++] = new flipNormals(new xzRectangleCanHit(0, 555, 0, 555, 555, white));
-    list[i++] = new xzRectangleCanHit(0, 555, 0, 555, 0, white);
-    list[i++] = new flipNormals(new rectangleCanHit(0, 555, 0, 555, 555, white));
+    list[i++] = new xzRectangleCanHit(0, 555, 0, 555, 0, white2);
+    list[i++] = new flipNormals(new rectangleCanHit(0, 555, 0, 555, 555, white3));
 
-    list[i++] = new translate(new rotateY(new boxCanHit(vec3(0, 0, 0), vec3(165, 165, 165), white), -18),
+    list[i++] = new translate(new rotateY(new boxCanHit(vec3(0, 0, 0), vec3(165, 165, 165), white4), -18),
                               vec3(130, 0, 65));
-    //list[i++] = new triangleCanHit(vec3(100,100,120), vec3(165,330,165), vec3(140,140,140),red);
-    list[i++] = new translate(new rotateY(new boxCanHit(vec3(0, 0, 0), vec3(165, 330, 165), white), 15),
+    //list[i++] = new triangleCanHit(vec3(100,100,120), vec3(165,330,165), vec3(140,140,140),red2);
+    list[i++] = new translate(new rotateY(new boxCanHit(vec3(0, 0, 0), vec3(165, 330, 165), white5), 15),
                               vec3(265, 0, 295));
 
-    //list[i++] = new translate(new rotateY( new boxCanHit(vec3(130, 0, 65), vec3(295, 165, 230), white)),vec3(130,0,65));
-    //list[i++] = new boxCanHit(vec3(265, 0, 295), vec3(430, 330, 460), white);
-    //return new canHitGenericList(list, i);
+    //list[i++] = new translate(new rotateY( new boxCanHit(vec3(130, 0, 65), vec3(295, 165, 230), white6)),vec3(130,0,65));
+    //list[i++] = new boxCanHit(vec3(265, 0, 295), vec3(430, 330, 460), white7);
     return new canHitGenericList(list, i);
 }
 
