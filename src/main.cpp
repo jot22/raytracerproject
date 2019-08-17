@@ -68,7 +68,7 @@ vec3 color(const ray &r, canHitGeneric *world, int depth) {
         }
         return emitted;
     }
-    return {1, 1, 1}; //No lights in scene, Have to put your own
+    return {0, 0, 0}; //No lights in scene, Have to put your own
 
 }
 
@@ -361,21 +361,21 @@ int main() {
 
     //initializes world to output to ppm
     canHitGeneric *world =
-            randomSceneGen();
-    //cornellBox();
-    //         cornellHotBox();
-//            cornellHotBox2();
+//            randomSceneGen();
+            //cornellBox();
+            //         cornellHotBox();
+            cornellHotBox2();
 //               cornellLotsOfSpheres(); *not memory leak safe
 //            makeTriangleScene();
 //            makeBunny();
 
     //spheres camera look from/at
-    vec3 lookFrom(13, 2, 3);
-    vec3 lookAt(0, 0, 0);
+//    vec3 lookFrom(13, 2, 3);
+//    vec3 lookAt(0, 0, 0);
 
 //    cornell camera look from/at
-//    vec3 lookFrom(278, 278, -800);
-//    vec3 lookAt(278, 278, 0);
+    vec3 lookFrom(278, 278, -800);
+    vec3 lookAt(278, 278, 0);
 
     float dist_to_focus = 10.0;
     float aperture = 0.0;
