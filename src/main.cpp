@@ -267,7 +267,7 @@ canHitGeneric *cornellLotsOfSpheres() {
         }
     }
     int l = 0;
-    list[l++] = new bvhNode(boxList, b, 0, 1);
+    list[l++] = new bvh(boxList, b, 0, 1);
     auto *light = new diffuseLightMaterial(new constantTexture(vec3(7, 7, 7)));
     list[l++] = new xzRectangleCanHit(123, 423, 147, 412, 554, light);
     vec3 center(400, 400, 200);
@@ -276,10 +276,12 @@ canHitGeneric *cornellLotsOfSpheres() {
                                  new metalMaterial(new constantTexture(vec3(0.8, 0.8, 0.9)), 10.0));
 
     auto *boundary = new sphereCanHit(vec3(360, 150, 145), 70, new dielectricMaterial(1.5));
+    auto *boundary2 = new sphereCanHit(vec3(360, 150, 145), 70, new dielectricMaterial(1.5));
+    auto *boundary3 = new sphereCanHit(vec3(360, 150, 145), 70, new dielectricMaterial(1.5));
     list[l++] = boundary;
-    list[l++] = new constantMedium(boundary, 0.2, new constantTexture(vec3(0.2, 0.4, 0.9)));
+    list[l++] = new constantMedium(boundary2, 0.2, new constantTexture(vec3(0.2, 0.4, 0.9)));
     boundary = new sphereCanHit(vec3(0, 0, 0), 5000, new dielectricMaterial(1.5));
-    list[l++] = new constantMedium(boundary, 0.0001, new constantTexture(vec3(1.0, 1.0, 1.0)));
+    list[l++] = new constantMedium(boundary3, 0.0001, new constantTexture(vec3(1.0, 1.0, 1.0)));
 
 
     int w, h;
@@ -301,9 +303,9 @@ canHitGeneric *cornellLotsOfSpheres() {
         boxList2[j] = new sphereCanHit(vec3(165 * (rand() / (RAND_MAX + 1.0)), 165 * ((rand() / (RAND_MAX + 1.0))),
                                             165 * (rand() / (RAND_MAX + 1.0))), 10, white);
     }
-    list[l++] = new translate(new rotateY(new bvhNode(boxList2, ns, 0.0, 1.0), 15), vec3(-100, 270, 395));
+    list[l++] = new translate(new rotateY(new bvh(boxList2, ns, 0.0, 1.0), 15), vec3(-100, 270, 395));
 
-    return new bvhNode(list, l, 0, 0);
+    return new bvh(list, l, 0, 0);
 }
 
 //sets up camera with input values
@@ -352,7 +354,7 @@ int main() {
     int ny = 640;  //Height
     //Anti-Aliasing Samples, Higher = Better = Slower
     //Higher Resolution means lower ns value is needed.
-    int ns = 10;
+    int ns = 1;
 
     myfile << "P3\n" << nx << " " << ny << "\n255\n";
 
@@ -360,8 +362,8 @@ int main() {
     canHitGeneric *world =
 //            cornellBox();
 //            cornellHotBox();
-            cornellHotBox2();
-//            cornellLotsOfSpheres();
+//            cornellHotBox2();
+            cornellLotsOfSpheres();
 //            randomSceneGen();
 //            makeTriangleScene();
 //            makeBunny();
