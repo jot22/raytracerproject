@@ -68,7 +68,7 @@ vec3 color(const ray &r, canHitGeneric *world, int depth) {
         }
         return emitted;
     }
-    return {1, 1, 1}; //No lights in scene, Have to put your own
+    return {0, 0, 0}; //No lights in scene, Have to put your own
 
 }
 
@@ -330,7 +330,7 @@ canHitGeneric *makeBunny() {
         list[k++] = new triangleCanHit(bun.at(i), bun.at(i + 1), bun.at(i + 2), red);
     }
     //return new canHitGenericList(list, k);
-    return new bvh(list, k, 0, 0);
+    return new bvhNode(list, k, 0, 0);
 }
 
 //main function for ray tracing where you can initialize world, perform ray tracing, and output to ppm
@@ -343,7 +343,7 @@ int main() {
     int ny = 640;  //Height
     //Anti-Aliasing Samples, Higher = Better = Slower
     //Higher Resolution means lower ns value is needed.
-    int ns = 1;
+    int ns = 10;
 
     myfile << "P3\n" << nx << " " << ny << "\n255\n";
 
@@ -351,19 +351,19 @@ int main() {
     canHitGeneric *world =
             //randomSceneGen();
             //cornellBox();
-            //cornellHotBox();
-            //  cornellHotBox2();
-            //cornellLotsOfSpheres();
-            // makeTriangleScene();
-            makeBunny();
+            //         cornellHotBox();
+            cornellHotBox2();
+//               cornellLotsOfSpheres();
+//            makeTriangleScene();
+//            makeBunny();
 
     //spheres camera look from/at
-    vec3 lookFrom(13, 2, 3);
-    vec3 lookAt(0, 0, 0);
+//    vec3 lookFrom(13, 2, 3);
+//    vec3 lookAt(0, 0, 0);
 
-    //cornell camera look from/at
-    //vec3 lookFrom(278, 278, -800);
-    //vec3 lookAt(278, 278, 0);
+//    cornell camera look from/at
+    vec3 lookFrom(278, 278, -800);
+    vec3 lookAt(278, 278, 0);
 
     float dist_to_focus = 10.0;
     float aperture = 0.0;
@@ -398,7 +398,7 @@ int main() {
     }
     std::cout << ":::::::Render Complete:::::::\n";
     myfile.close();
-    delete world;
+    //delete world;
 
     return 0;
 }

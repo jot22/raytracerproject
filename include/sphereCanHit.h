@@ -30,7 +30,7 @@ public:
     //variables for sphereCanHit
     vec3 center;
     float radius{};
-    material *mat_ptr{};
+    material *mat_ptr;
 };
 
 //determines if bounding box is valid or not for sphereCanHit
