@@ -361,12 +361,12 @@ int main() {
 
     //initializes world to output to ppm
     canHitGeneric *world =
-            //randomSceneGen();
-            //cornellBox();
-            //         cornellHotBox();
+            randomSceneGen();
+    //cornellBox();
+    //         cornellHotBox();
 //            cornellHotBox2();
 //               cornellLotsOfSpheres(); *not memory leak safe
-            makeTriangleScene();
+//            makeTriangleScene();
 //            makeBunny();
 
     //spheres camera look from/at
