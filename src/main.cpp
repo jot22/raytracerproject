@@ -366,8 +366,8 @@ int main() {
             //         cornellHotBox();
 //            cornellHotBox2();
 //               cornellLotsOfSpheres(); *not memory leak safe
-//            makeTriangleScene();
-            makeBunny();
+            makeTriangleScene();
+//            makeBunny();
 
     //spheres camera look from/at
     vec3 lookFrom(13, 2, 3);
