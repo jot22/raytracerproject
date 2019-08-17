@@ -277,10 +277,10 @@ canHitGeneric *cornellLotsOfSpheres() {
 
     auto *boundary = new sphereCanHit(vec3(360, 150, 145), 70, new dielectricMaterial(1.5));
     auto *boundary2 = new sphereCanHit(vec3(360, 150, 145), 70, new dielectricMaterial(1.5));
-    auto *boundary3 = new sphereCanHit(vec3(360, 150, 145), 70, new dielectricMaterial(1.5));
+
     list[l++] = boundary;
     list[l++] = new constantMedium(boundary2, 0.2, new constantTexture(vec3(0.2, 0.4, 0.9)));
-    boundary = new sphereCanHit(vec3(0, 0, 0), 5000, new dielectricMaterial(1.5));
+    auto *boundary3 = new sphereCanHit(vec3(0, 0, 0), 5000, new dielectricMaterial(1.5));
     list[l++] = new constantMedium(boundary3, 0.0001, new constantTexture(vec3(1.0, 1.0, 1.0)));
 
 
