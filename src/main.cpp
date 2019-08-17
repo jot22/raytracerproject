@@ -352,15 +352,15 @@ int main() {
     int ny = 640;  //Height
     //Anti-Aliasing Samples, Higher = Better = Slower
     //Higher Resolution means lower ns value is needed.
-    int ns = 1;
+    int ns = 10;
 
     myfile << "P3\n" << nx << " " << ny << "\n255\n";
 
     //initializes world to output to ppm
     canHitGeneric *world =
-            cornellBox();
-    //         cornellHotBox();
-//            cornellHotBox2();
+//            cornellBox();
+//            cornellHotBox();
+            cornellHotBox2();
 //            cornellLotsOfSpheres();
 //            randomSceneGen();
 //            makeTriangleScene();
