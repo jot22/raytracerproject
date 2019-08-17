@@ -22,8 +22,8 @@ public:
 
     //Destructor for bvnNode
     ~bvhNode() {
-        delete left;
-        delete right;
+      //  delete left;
+       // delete right;
     }
 
     //Determines if ray hits or not

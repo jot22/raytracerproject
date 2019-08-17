@@ -10,6 +10,7 @@
 #include "dielectricMaterial.h"
 #include "metalMaterial.h"
 #include "bvhNode.h"
+#include "bvh.h"
 #include "camera.h"
 #include "fstream"
 #include "imageTexture.h"
@@ -67,7 +68,7 @@ vec3 color(const ray &r, canHitGeneric *world, int depth) {
         }
         return emitted;
     }
-    return {0, 0, 0}; //No lights in scene, Have to put your own
+    return {1, 1, 1}; //No lights in scene, Have to put your own
 
 }
 
@@ -323,12 +324,12 @@ canHitGeneric *makeBunny() {
     vector <vec3> bun = bunny.getFaceVertexVector();
 //    std::cout << bun.size() << "\n";
     auto **list = new canHitGeneric *[bun.size()];
-    material *red = new metalMaterial(new constantTexture(vec3(0.83, 0.686, 0.2156)), 0.0);
     int k = 0;
     for (unsigned int i = 0; i < bun.size(); i += 3) {
+        material *red = new metalMaterial(new constantTexture(vec3(0.83, 0.686, 0.2156)), 0.0);
         list[k++] = new triangleCanHit(bun.at(i), bun.at(i + 1), bun.at(i + 2), red);
     }
-    return new bvhNode(list, k, 0, 0);
+    return new bvh(list, k, 0, 0);
 }
 
 //main function for ray tracing where you can initialize world, perform ray tracing, and output to ppm
@@ -350,13 +351,19 @@ int main() {
             //randomSceneGen();
             //cornellBox();
             //cornellHotBox();
-            cornellHotBox2();
-    //cornellLotsOfSpheres();
-    //makeTriangleScene();
-    //makeBunny();
+            //  cornellHotBox2();
+            //cornellLotsOfSpheres();
+            //makeTriangleScene();
+            makeBunny();
 
-    vec3 lookFrom(278, 278, -800);
-    vec3 lookAt(278, 278, 0);
+    //spheres camera look from/at
+    vec3 lookFrom(13, 2, 3);
+    vec3 lookAt(0, 0, 0);
+
+    //cornell camera look from/at
+    //vec3 lookFrom(278, 278, -800);
+    //vec3 lookAt(278, 278, 0);
+
     float dist_to_focus = 10.0;
     float aperture = 0.0;
     int vFOV = 40;
@@ -390,7 +397,7 @@ int main() {
     }
     std::cout << ":::::::Render Complete:::::::\n";
     myfile.close();
-    //delete world;
+    delete world;
 
     return 0;
 }
