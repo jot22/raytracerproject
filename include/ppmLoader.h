@@ -24,7 +24,7 @@ public:
      * @param width Filling up the width of the PPM.
      * @param height Filling up the height of the PPM.
      */
-    void *pix(const string &ppmFile, int &width, int &height) {
+    void pix(const string &ppmFile, int &width, int &height) {
         ifstream openFile;
         openFile.open(ppmFile);
         std::string eachLine;
