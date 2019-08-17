@@ -18,12 +18,16 @@ public:
     bvh(canHitGeneric **l, int n, float time0, float time1) {
         list = l;
         node = new bvhNode(l, n, time0, time1);
+        list_size = n;
     }
 
     //Destructor for bvh
     ~bvh() {
         delete node;
-        delete list;
+        for (int i = 0; i < list_size; i++) {
+            delete list[i];
+        }
+        delete[] list;
     }
 
     //determines if ray hits bvh or not
@@ -40,6 +44,7 @@ public:
     canHitGeneric *node;
     canHitGeneric **list;
     aabb boxX;
+    int list_size;
 };
 
 #endif //RAYTRACER_BVH_H
