@@ -24,9 +24,9 @@ public:
     //Destructor for bvh
     ~bvh() {
         delete node;
-        for (int i = 0; i < list_size; i++) {
-            delete list[i];
-        }
+//        for (int i = 0; i < list_size; i++) {
+//            delete list[i];
+//        }
         delete[] list;
     }
 
