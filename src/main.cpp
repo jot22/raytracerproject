@@ -361,7 +361,7 @@ int main() {
 
     //initializes world to output to ppm
     canHitGeneric *world =
-//            randomSceneGen();
+//            randomSceneGen(); *not memory leak safe
             //cornellBox();
             //         cornellHotBox();
             cornellHotBox2();
