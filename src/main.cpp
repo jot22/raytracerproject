@@ -354,7 +354,7 @@ int main() {
     int ny = 640;  //Height
     //Anti-Aliasing Samples, Higher = Better = Slower
     //Higher Resolution means lower ns value is needed.
-    int ns = 1;
+    int ns = 10;
 
     myfile << "P3\n" << nx << " " << ny << "\n255\n";
 
@@ -362,8 +362,8 @@ int main() {
     canHitGeneric *world =
 //            cornellBox();
 //            cornellHotBox();
-//            cornellHotBox2();
-            cornellLotsOfSpheres();
+            cornellHotBox2();
+//            cornellLotsOfSpheres();
 //            randomSceneGen();
 //            makeTriangleScene();
 //            makeBunny();
