@@ -112,6 +112,10 @@ canHitGeneric *cornellHotBox() {
     int i = 0;
     material *red = new diffuseMaterial_Lambertian(new constantTexture(vec3(0.65, 0.05, 0.05)));
     material *white = new diffuseMaterial_Lambertian(new constantTexture(vec3(0.73, 0.73, 0.73)));
+    material *white2 = new diffuseMaterial_Lambertian(new constantTexture(vec3(0.73, 0.73, 0.73)));
+    material *white3 = new diffuseMaterial_Lambertian(new constantTexture(vec3(0.73, 0.73, 0.73)));
+    material *white4 = new diffuseMaterial_Lambertian(new constantTexture(vec3(0.73, 0.73, 0.73)));
+    material *white5 = new diffuseMaterial_Lambertian(new constantTexture(vec3(0.73, 0.73, 0.73)));
     material *green = new diffuseMaterial_Lambertian(new constantTexture(vec3(0.12, 0.45, 0.15)));
     material *light = new diffuseLightMaterial(new constantTexture(vec3(7, 7, 7)));
 
@@ -119,12 +123,12 @@ canHitGeneric *cornellHotBox() {
     list[i++] = new yzRectangleCanHit(0, 555, 0, 555, 0, red);
     list[i++] = new xzRectangleCanHit(113, 443, 127, 432, 554, light);
     list[i++] = new flipNormals(new xzRectangleCanHit(0, 555, 0, 555, 555, white));
-    list[i++] = new xzRectangleCanHit(0, 555, 0, 555, 0, white);
-    list[i++] = new flipNormals(new rectangleCanHit(0, 555, 0, 555, 555, white));
+    list[i++] = new xzRectangleCanHit(0, 555, 0, 555, 0, white2);
+    list[i++] = new flipNormals(new rectangleCanHit(0, 555, 0, 555, 555, white3));
 
-    auto *b1 = new translate(new rotateY(new boxCanHit(vec3(0, 0, 0), vec3(165, 165, 165), white), -18),
+    auto *b1 = new translate(new rotateY(new boxCanHit(vec3(0, 0, 0), vec3(165, 165, 165), white4), -18),
                              vec3(130, 0, 65));
-    auto *b2 = new translate(new rotateY(new boxCanHit(vec3(0, 0, 0), vec3(165, 330, 165), white), 15),
+    auto *b2 = new translate(new rotateY(new boxCanHit(vec3(0, 0, 0), vec3(165, 330, 165), white5), 15),
                              vec3(265, 0, 295));
 
     list[i++] = new constantMedium(b1, 0.01, new constantTexture(vec3(1.0, 1.0, 1.0)));
@@ -137,10 +141,12 @@ canHitGeneric *cornellHotBox() {
 canHitGeneric *cornellHotBox2() {
     OBJ bunny("./bunny_centered.obj");
     vector <vec3> bun = bunny.getFaceVertexVector();
-    auto **list = new canHitGeneric *[4 * bun.size() + 8];
+    auto **list = new canHitGeneric *[4 * bun.size() + 6];
     int i = 0;
     material *red = new diffuseMaterial_Lambertian(new constantTexture(vec3(0.65, 0.05, 0.05)));
     material *white = new diffuseMaterial_Lambertian(new constantTexture(vec3(0.73, 0.73, 0.73)));
+    material *white2 = new diffuseMaterial_Lambertian(new constantTexture(vec3(0.73, 0.73, 0.73)));
+    material *white3 = new diffuseMaterial_Lambertian(new constantTexture(vec3(0.73, 0.73, 0.73)));
     material *green = new diffuseMaterial_Lambertian(new constantTexture(vec3(0.12, 0.45, 0.15)));
     material *light = new diffuseLightMaterial(new constantTexture(vec3(7, 7, 7)));
 
@@ -148,32 +154,32 @@ canHitGeneric *cornellHotBox2() {
     list[i++] = new yzRectangleCanHit(0, 555, 0, 555, 0, red);
     list[i++] = new xzRectangleCanHit(213, 343, 227, 332, 554, light);
     list[i++] = new flipNormals(new xzRectangleCanHit(0, 555, 0, 555, 555, white));
-    list[i++] = new xzRectangleCanHit(0, 555, 0, 555, 0, white);
-    list[i++] = new flipNormals(new rectangleCanHit(0, 555, 0, 555, 555, white));
-    material *metalGold = new metalMaterial(new constantTexture(vec3(0.83, 0.686, 0.2156)), 0.0);
-    material *ferrariRed = new metalMaterial(new constantTexture(vec3(1.0f, 0.062745098f, 0.0f)), 0.0);
-    material *diamond = new dielectricMaterial(2.42f);
-    material *glass = new dielectricMaterial(1.5f);
+    list[i++] = new xzRectangleCanHit(0, 555, 0, 555, 0, white2);
+    list[i++] = new flipNormals(new rectangleCanHit(0, 555, 0, 555, 555, white3));
 
     for (unsigned int k = 0; k < bun.size(); k += 3) {
+        material *ferrariRed = new metalMaterial(new constantTexture(vec3(1.0f, 0.062745098f, 0.0f)), 0.0);
         list[i++] = new translate(
                 new triangleCanHit(rotateYAxis(bun.at(k), -50) * 40, rotateYAxis(bun.at(k + 1), -50) * 40,
                                    rotateYAxis(bun.at(k + 2), -50) * 40, ferrariRed),
                 vec3(440, 50, 0));
     }
     for (unsigned int k = 0; k < bun.size(); k += 3) {
+        material *diamond = new dielectricMaterial(2.42f);
         list[i++] = new translate(
                 new triangleCanHit(rotateYAxis(bun.at(k), -25) * 53, rotateYAxis(bun.at(k + 1), -25) * 53,
                                    rotateYAxis(bun.at(k + 2), -25) * 53, diamond),
                 vec3(350, 56, 0));
     }
     for (unsigned int k = 0; k < bun.size(); k += 3) {
+        material *metalGold = new metalMaterial(new constantTexture(vec3(0.83, 0.686, 0.2156)), 0.0);
         list[i++] = new translate(
                 new triangleCanHit(rotateYAxis(bun.at(k), 25) * 66, rotateYAxis(bun.at(k + 1), 25) * 66,
                                    rotateYAxis(bun.at(k + 2), 25) * 66, metalGold),
                 vec3(240, 62, 0));
     }
     for (unsigned int k = 0; k < bun.size(); k += 3) {
+        material *glass = new dielectricMaterial(1.5f);
         list[i++] = new translate(new triangleCanHit(bun.at(k) * 80, bun.at(k + 1) * 80, bun.at(k + 2) * 80, glass),
                                   vec3(120, 67, 0));
     }
@@ -183,7 +189,7 @@ canHitGeneric *cornellHotBox2() {
 //    list[i++] = new translate(new rotateY(new boxCanHit(vec3(0, 0, 0), vec3(165, 330, 165), white), 15),
 //                              vec3(265, 0, 295));
 
-    return new bvhNode(list, i, 0, 0);
+    return new bvh(list, i, 0, 0);
 
 }
 
@@ -236,7 +242,7 @@ canHitGeneric *randomSceneGen() {
                                          new constantTexture(vec3(0.83, 0.686, 0.2156)), 0.0));
 //    list[i++] = new rectangleCanHit(3, 5, 1, 3, -2, new diffuseLightMaterial(new constantTexture(vec3(4, 4, 4))));
 
-    return new bvhNode(list, i, 0.0, 0.0);
+    return new bvh(list, i, 0.0, 0.0);
 }
 
 //makes cornell box with lots of spheres
@@ -349,7 +355,7 @@ int main() {
     int ny = 640;  //Height
     //Anti-Aliasing Samples, Higher = Better = Slower
     //Higher Resolution means lower ns value is needed.
-    int ns = 10;
+    int ns = 1;
 
     myfile << "P3\n" << nx << " " << ny << "\n255\n";
 
@@ -359,7 +365,7 @@ int main() {
             //cornellBox();
             //         cornellHotBox();
 //            cornellHotBox2();
-//               cornellLotsOfSpheres();
+//               cornellLotsOfSpheres(); *not memory leak safe
 //            makeTriangleScene();
             makeBunny();
 

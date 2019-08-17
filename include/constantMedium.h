@@ -24,6 +24,7 @@ public:
 
     //Destructor for constantMedium
     ~constantMedium() {
+        delete boundary;
         delete phaseFunc;
     }
 
