@@ -329,6 +329,7 @@ canHitGeneric *makeBunny() {
         material *red = new metalMaterial(new constantTexture(vec3(0.83, 0.686, 0.2156)), 0.0);
         list[k++] = new triangleCanHit(bun.at(i), bun.at(i + 1), bun.at(i + 2), red);
     }
+    //return new canHitGenericList(list, k);
     return new bvh(list, k, 0, 0);
 }
 
@@ -342,7 +343,7 @@ int main() {
     int ny = 640;  //Height
     //Anti-Aliasing Samples, Higher = Better = Slower
     //Higher Resolution means lower ns value is needed.
-    int ns = 10;
+    int ns = 1;
 
     myfile << "P3\n" << nx << " " << ny << "\n255\n";
 
@@ -353,7 +354,7 @@ int main() {
             //cornellHotBox();
             //  cornellHotBox2();
             //cornellLotsOfSpheres();
-            //makeTriangleScene();
+            // makeTriangleScene();
             makeBunny();
 
     //spheres camera look from/at

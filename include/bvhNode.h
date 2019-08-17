@@ -22,8 +22,10 @@ public:
 
     //Destructor for bvnNode
     ~bvhNode() {
-      //  delete left;
-       // delete right;
+        if (destruct) {
+            delete left;
+            delete right;
+        }
     }
 
     //Determines if ray hits or not
@@ -36,6 +38,7 @@ public:
     canHitGeneric *left{};
     canHitGeneric *right{};
     aabb boxX;
+    bool destruct;
 };
 
 //Determines if bounding box is valid or not
@@ -119,6 +122,7 @@ int box_z_compare(const void *a, const void *b) {
 //Randomly chooses an axis
 //Sorts the passed in canHitGeneric and puts each half in each subtree
 bvhNode::bvhNode(canHitGeneric **l, int n, float time0, float time1) {
+    destruct = true;
     int axis = int(3 * (rand() / (RAND_MAX + 1.0)));
     if (axis == 0) {
         qsort(l, n, sizeof(canHitGeneric *), box_x_compare);
@@ -129,9 +133,11 @@ bvhNode::bvhNode(canHitGeneric **l, int n, float time0, float time1) {
     }
     if (n == 1) {
         left = right = l[0];
+        destruct = false;
     } else if (n == 2) {
         left = l[0];
         right = l[1];
+        destruct = false;
     } else {
         left = new bvhNode(l, n / 2, time0, time1);
         right = new bvhNode(l + n / 2, n - n / 2, time0, time1);
