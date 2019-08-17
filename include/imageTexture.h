@@ -13,24 +13,26 @@
 class imageTexture : public texture {
 public:
     //Default constructor for imageTexture
-    imageTexture() = default;
+    imageTexture() {};
 
-    //Initializes imageTexture with pixel array, nx, and ny
-    imageTexture(unsigned char *pixels, int A, int B) {
-        pixelData = pixels;
+    //Initializes imageTexture with ppmLoader, nx, and ny
+    imageTexture(ppmLoader *ppm, int A, int B) {
+        pixx = ppm;
+        pixelData = ppm->getPixelData();
         nx = A;
         ny = B;
     }
 
     //Destructor for imageTexture
     ~imageTexture() {
-        delete pixelData;
+        delete pixx;
     }
 
     //Value for imageTexture
     vec3 value(float u, float v, const vec3 &p) const override;
 
     //Variables for imageTexture
+    ppmLoader *pixx;
     unsigned char *pixelData;
     int nx, ny;
 };

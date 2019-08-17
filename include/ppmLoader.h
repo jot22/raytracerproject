@@ -23,9 +23,8 @@ public:
      * @param ppmFile the ppm file to be loaded
      * @param width Filling up the width of the PPM.
      * @param height Filling up the height of the PPM.
-     * @return the PPM file data transformed as an unsigned char array
      */
-    unsigned char *pix(const string &ppmFile, int &width, int &height) {
+    void *pix(const string &ppmFile, int &width, int &height) {
         ifstream openFile;
         openFile.open(ppmFile);
         std::string eachLine;
@@ -83,8 +82,12 @@ public:
         openFile.close();
         height = m_height;
         width = m_width;
-        return m_PixelData;
         //Do error handling if file is broken
+    }
+
+    //Returns the pixel data
+    unsigned char *getPixelData() {
+        return m_PixelData;
     }
 
     //Destructor for ppmLoader
@@ -92,8 +95,8 @@ public:
         delete[] m_PixelData;
     }
 
-    //Variables for ppmLoader
 private:
+    //Variables for ppmLoader
     int m_height;
     int m_width;
     int m_max;

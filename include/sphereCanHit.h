@@ -11,10 +11,14 @@
 class sphereCanHit : public canHitGeneric {
 public:
     //Default constructor for sphereCanHit
-    sphereCanHit() = default;
+    sphereCanHit() {};
 
     //initializes sphere can hit with center, radius, and material
-    sphereCanHit(vec3 cen, float r, material *m) : center(cen), radius(r), mat_ptr(m) {};
+    sphereCanHit(vec3 cen, float r, material *m) {
+        center = cen;
+        radius = r;
+        mat_ptr = m;
+    };
 
     //destructor for sphereCanHit
     ~sphereCanHit() {
@@ -29,7 +33,7 @@ public:
 
     //variables for sphereCanHit
     vec3 center;
-    float radius{};
+    float radius;
     material *mat_ptr;
 };
 

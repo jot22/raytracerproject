@@ -4,7 +4,6 @@
 #include "canHitGeneric.h"
 #include "texture.h"
 #include "checkerBoardTexture.h"
-#include "sphereCanHit.h"
 #include "constantTexture.h"
 #include "diffuseMaterial_Lambertian.h"
 #include "dielectricMaterial.h"
@@ -20,6 +19,7 @@
 #include "xzRectangleCanHit.h"
 #include "canHitGenericList.h"
 #include "flipNormals.h"
+#include "sphereCanHit.h"
 #include "boxCanHit.h"
 #include "translate.h"
 #include "rotateY.h"
@@ -68,8 +68,8 @@ vec3 color(const ray &r, canHitGeneric *world, int depth) {
         }
         return emitted;
     }
-    return {0, 0, 0}; //No lights in scene, Have to put your own
-
+    return {1, 1, 1}; //fully lit up scene (spheres, triangle, bunny)
+//    return {0, 0, 0}; //No lights in scene, Have to put your own
 }
 
 //makes cornellbox scene
@@ -230,18 +230,17 @@ canHitGeneric *randomSceneGen() {
     }
 
     int w, h;
-    ppmLoader loadPPM{};
+    ppmLoader *loadPPM = new ppmLoader();
 
-    unsigned char *pixx = loadPPM.pix("cap.ppm", w, h);
+    loadPPM->pix("cap.ppm", w, h);
     std::cout << w << " " << h << "\n";
 
     list[i++] = new sphereCanHit(vec3(0, 1, 0), 1.0, new dielectricMaterial(1.5));
-    list[i++] = new sphereCanHit(vec3(4, 1, 0), 1.0, new diffuseMaterial_Lambertian(new imageTexture(pixx, w, h)));
+    list[i++] = new sphereCanHit(vec3(4, 1, 0), 1.0, new diffuseMaterial_Lambertian(new imageTexture(loadPPM, w, h)));
     list[i++] = new sphereCanHit(vec3(-4, 1, 0), 1.0,
                                  new metalMaterial(
                                          new constantTexture(vec3(0.83, 0.686, 0.2156)), 0.0));
 //    list[i++] = new rectangleCanHit(3, 5, 1, 3, -2, new diffuseLightMaterial(new constantTexture(vec3(4, 4, 4))));
-
     return new bvh(list, i, 0.0, 0.0);
 }
 
@@ -252,12 +251,10 @@ canHitGeneric *cornellLotsOfSpheres() {
     auto **boxList = new canHitGeneric *[10000];
     auto **boxList2 = new canHitGeneric *[10000];
 
-    auto *white = new diffuseMaterial_Lambertian(new constantTexture(vec3(0.73, 0.73, 0.73)));
-    auto *ground = new diffuseMaterial_Lambertian(new constantTexture(vec3(0.48, 0.83, 0.53)));
-
     int b = 0;
     for (int i = 0; i < nb; i++) {
         for (int j = 0; j < nb; j++) {
+            auto *ground = new diffuseMaterial_Lambertian(new constantTexture(vec3(0.48, 0.83, 0.53)));
             float w = 100;
             float x0 = -1000 + i * w;
             float y0 = 0;
@@ -286,27 +283,27 @@ canHitGeneric *cornellLotsOfSpheres() {
 
 
     int w, h;
-    ppmLoader loadPPM{};
+    ppmLoader *pixx = new ppmLoader();
 
-    unsigned char *pixx = loadPPM.pix("cap.ppm", w, h);
+    pixx->pix("cap.ppm", w, h);
     auto *emat = new diffuseMaterial_Lambertian(new imageTexture(pixx, w, h));
 
 
     list[l++] = new sphereCanHit(vec3(400, 200, 400), 100, emat);
 
-    pixx = loadPPM.pix("w.ppm", w, h);
-    emat = new diffuseMaterial_Lambertian(new imageTexture(pixx, w, h));
+    ppmLoader *pixx2 = new ppmLoader();
+    pixx2->pix("w.ppm", w, h);
+    emat = new diffuseMaterial_Lambertian(new imageTexture(pixx2, w, h));
     list[l++] = new sphereCanHit(vec3(220, 280, 300), 80, emat);
     int ns = 1000;
     for (int j = 0; j < ns; j++) {
+        auto *white = new diffuseMaterial_Lambertian(new constantTexture(vec3(0.73, 0.73, 0.73)));
         boxList2[j] = new sphereCanHit(vec3(165 * (rand() / (RAND_MAX + 1.0)), 165 * ((rand() / (RAND_MAX + 1.0))),
                                             165 * (rand() / (RAND_MAX + 1.0))), 10, white);
     }
     list[l++] = new translate(new rotateY(new bvhNode(boxList2, ns, 0.0, 1.0), 15), vec3(-100, 270, 395));
-    return new canHitGenericList(list, l);
 
-    //return new bvhNode(list,l,0,0);
-
+    return new bvhNode(list, l, 0, 0);
 }
 
 //sets up camera with input values
@@ -361,21 +358,21 @@ int main() {
 
     //initializes world to output to ppm
     canHitGeneric *world =
-//            randomSceneGen(); *not memory leak safe
             //cornellBox();
             //         cornellHotBox();
-            cornellHotBox2();
-//               cornellLotsOfSpheres(); *not memory leak safe
+//            cornellHotBox2();
+//            cornellLotsOfSpheres();
+//            randomSceneGen();
 //            makeTriangleScene();
-//            makeBunny();
+            makeBunny();
 
-    //spheres camera look from/at
-//    vec3 lookFrom(13, 2, 3);
-//    vec3 lookAt(0, 0, 0);
+    //random/triangle/bunny camera look from/at
+    vec3 lookFrom(13, 2, 3);
+    vec3 lookAt(0, 0, 0);
 
 //    cornell camera look from/at
-    vec3 lookFrom(278, 278, -800);
-    vec3 lookAt(278, 278, 0);
+//    vec3 lookFrom(278, 278, -800);
+//    vec3 lookAt(278, 278, 0);
 
     float dist_to_focus = 10.0;
     float aperture = 0.0;
