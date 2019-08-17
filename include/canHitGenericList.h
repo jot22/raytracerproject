@@ -10,13 +10,16 @@
 //A Class that Holds a List of canHitGeneric sub-objects, basically a container for Hittable Objects.
 class canHitGenericList : public canHitGeneric {
 public:
+    //Default constructor for canHitGenericList
     canHitGenericList() = default;
 
+    //Initializes canHitGenericList with list and size
     canHitGenericList(canHitGeneric **l, int n) {
         list = l;
         list_size = n;
     };
 
+    //Destructor for canHitGenericList
     ~canHitGenericList() {
         for (int i = 0; i < list_size; ++i) {
             delete list[i];
@@ -24,10 +27,13 @@ public:
         delete[] list;
     }
 
+    //Determines if ray hits or not
     bool hit(const ray &r, float tMin, float tMax, hit_record &rec) const override;
 
+    //Determines if bounding box is valid or not
     bool bounding_box(float t0, float t1, aabb &box) const override;
 
+    //Variables for canHitGenericList
     canHitGeneric **list;
     int list_size;
 };

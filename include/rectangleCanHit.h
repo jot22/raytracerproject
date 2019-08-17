@@ -12,8 +12,10 @@
 
 class rectangleCanHit : public canHitGeneric {
 public:
+    //Default constructor for rectangleCanHit
     rectangleCanHit() {}
 
+    //Initializes rectangleCanHit with input values
     rectangleCanHit(float _x0,
                     float _x1,
                     float _y0,
@@ -28,17 +30,21 @@ public:
         mp = mat;
     }
 
+    //Destructor for rectangleCanHit
     ~rectangleCanHit() {
         delete mp;
     }
 
+    //determines if ray hits rectangle or not
     bool hit(const ray &r, float t_min, float t_max, hit_record &rec) const override;
 
+    //determines if bounding box is valid for rectangle or not
     bool bounding_box(float t0, float t1, aabb &box) const override {
         box = aabb(vec3(x0, y0, k - 0.0001f), vec3(x1, y1, k + 0.0001f));
         return true;
     }
 
+    //variables for rectangleCanHit
     material *mp;
     float x0, x1, y0, y1, k;
 

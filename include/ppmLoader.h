@@ -15,6 +15,7 @@ using namespace std;
 //Loads a PPM file into a char array of data
 class ppmLoader {
 public:
+    //Default constructor for ppmLoader
     ppmLoader() = default;
 
     /**
@@ -86,10 +87,12 @@ public:
         //Do error handling if file is broken
     }
 
+    //Destructor for ppmLoader
     ~ppmLoader() {
         delete[] m_PixelData;
     }
 
+    //Variables for ppmLoader
 private:
     int m_height;
     int m_width;

@@ -15,21 +15,27 @@
 //A Class to Purely create a Rectangular 6 Sided 3D Box.
 class boxCanHit : public canHitGeneric {
 public:
+    //Default constructor for boxCanHit
     boxCanHit() {}
 
+    //Initializes boxCanHit with input vectors and material
     boxCanHit(const vec3 &p0, const vec3 &p1, material *ptr);
 
+    //Returns if ray hits or not
     bool hit(const ray &r, float t_min, float t_max, hit_record &rec) const;
 
+    //Returns if bounding box is valid or not
     bool bounding_box(float t0, float t1, aabb &box) const override {
         box = aabb(pMin, pMax);
         return true;
     }
 
+    //Destructor for boxCanHit
     ~boxCanHit() {
         delete lPtr;
     }
 
+    //Variables for boxCanHit class
     canHitGeneric *lPtr;
     vec3 pMin, pMax;
 };

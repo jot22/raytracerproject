@@ -10,19 +10,24 @@
 //A way of translating a canHitGeneric object to a different position in the world
 class translate : public canHitGeneric {
 public:
+    //initialzes translate with canHitGeneric and offset
     translate(canHitGeneric *p, const vec3 &displacement) {
         ptr = p;
         offset = displacement;
     }
 
+    //destructor for translate
     ~translate() {
         delete ptr;
     }
 
+    //determines if bounding box is valid or not for translate
     bool bounding_box(float t0, float t1, aabb &box) const override;
 
+    //determines if ray hits translate or not
     bool hit(const ray &r, float t_min, float t_max, hit_record &rec) const override;
 
+    //variables for translate
     vec3 offset;
     canHitGeneric *ptr;
 };

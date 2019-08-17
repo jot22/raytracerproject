@@ -7,9 +7,13 @@
 
 #include "ray.h"
 
-//Abstracts all Camera functionality in this class, handling view location, view position, aperture, field of view and such.
+//Abstracts all Camera functionality in this class, handling view location, view position, aperture,
+//field of view and such.
 class camera {
 public:
+
+    //Initializes camera with field of view, aspect, look from, look at, up vector, aperture, focus distance,
+    // and times
     camera(float vFOV,
            float aspect,
            vec3 lookFrom,
@@ -48,14 +52,15 @@ public:
 
     //Calculates a Ray, given all supplied inputs
     ray get_ray(float u, float v) {
-        vec3 rd = lens_radius*random_in_unit_disk();
-        vec3 offset = uU*rd.x()+vV*rd.y();
+        vec3 rd = lens_radius * random_in_unit_disk();
+        vec3 offset = uU * rd.x() + vV * rd.y();
 
-        float time = time0+(rand() / (RAND_MAX + 1.0))*(time1-time0);
+        float time = time0 + (rand() / (RAND_MAX + 1.0)) * (time1 - time0);
 
-        return {origin+offset, lower_left_corner + u * horizontal + v * vertical - origin-offset,time};
+        return {origin + offset, lower_left_corner + u * horizontal + v * vertical - origin - offset, time};
     }
 
+    //Variables for camera class
     vec3 origin;
     vec3 lower_left_corner;
     vec3 horizontal;

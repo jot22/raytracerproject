@@ -7,11 +7,12 @@
 
 #include "ray.h"
 
-
+//Returns the min of the two input floats
 inline float ffmin(float a, float b) {
     return a < b ? a : b;
 }
 
+//Returns the max of the two input floats
 inline float ffmax(float a, float b) {
     return a > b ? a : b;
 }
@@ -21,17 +22,21 @@ inline float ffmax(float a, float b) {
  */
 class aabb {
 public:
+    //Default constructor for bounding box
     aabb() = default;
 
+    //Initializes a bounding box with a minimum (a) and maximum (b) vector
     aabb(const vec3 &a, const vec3 &b) {
         _min = a;
         _max = b;
     }
 
+    //Returns the minimum vector for the bounding box
     vec3 min() const {
         return _min;
     }
 
+    //Returns the maximum vector for the bounding box
     vec3 max() const {
         return _max;
     }

@@ -12,20 +12,25 @@
 //Can also be used for any other type of ingested data, so long as it is converted into a char array of data
 class imageTexture : public texture {
 public:
+    //Default constructor for imageTexture
     imageTexture() = default;
 
+    //Initializes imageTexture with pixel array, nx, and ny
     imageTexture(unsigned char *pixels, int A, int B) {
         pixelData = pixels;
         nx = A;
         ny = B;
     }
 
+    //Destructor for imageTexture
     ~imageTexture() {
         delete pixelData;
     }
 
+    //Value for imageTexture
     vec3 value(float u, float v, const vec3 &p) const override;
 
+    //Variables for imageTexture
     unsigned char *pixelData;
     int nx, ny;
 };

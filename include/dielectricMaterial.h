@@ -13,12 +13,15 @@
 //Diamond = ~2.42
 class dielectricMaterial : public material {
 public:
+    //Initializes dielectricMaterial with ref_idx
     explicit dielectricMaterial(float rI) : ref_idx(rI) {}
 
+    //Destructor for dielectricMaterial
     ~dielectricMaterial() {
 
     }
 
+    //Scatters ray for dielectricMaterial
     bool scatter(const ray &r_in, const hit_record &rec, vec3 &attenuation, ray &scattered) const override {
         vec3 outward_normal;
         vec3 reflected = reflect(r_in.direction(), rec.normal);
@@ -55,6 +58,7 @@ public:
         return true;
     }
 
+    //Variable for dielectricMaterial
     float ref_idx;
 private:
     //What happens if a ray of light reflects off the object.

@@ -14,24 +14,31 @@ using namespace std;
 //Affords a huge speed up for scenes with many objects, may be slower with few objects
 class bvhNode : public canHitGeneric {
 public:
+    //Default constructor for bvhNode
     bvhNode() = default;
 
+    //Initializes bvhNode with list, list size, and times
     bvhNode(canHitGeneric **l, int n, float time0, float time1);
 
+    //Destructor for bvnNode
     ~bvhNode() {
         delete left;
         delete right;
     }
 
+    //Determines if ray hits or not
     bool hit(const ray &r, float t_min, float t_max, hit_record &rec) const override;
 
+    //Determines if bounding box is valid or not
     bool bounding_box(float t0, float t1, aabb &box) const override;
 
+    //Variables for bvhNode
     canHitGeneric *left{};
     canHitGeneric *right{};
     aabb boxX;
 };
 
+//Determines if bounding box is valid or not
 bool bvhNode::bounding_box(float t0, float t1, aabb &box) const {
     box = boxX;
     return true;

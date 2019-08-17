@@ -14,28 +14,35 @@
 //such as metal, glass, etc.
 class constantMedium : public canHitGeneric {
 public:
+
+    //Initializes constantMedium with canHitGeneric, density, and texture
     constantMedium(canHitGeneric *b, float d, texture *a) {
         boundary = b;
         density = d;
         phaseFunc = new isotrophic(a);
     }
 
+    //Destructor for constantMedium
     ~constantMedium() {
         delete phaseFunc;
     }
 
+    //Determines if ray hits or not
     bool hit(const ray &r, float t_min, float t_max, hit_record &rec) const override;
 
+    //Determines if bounding box is valid or not
     bool bounding_box(float t0, float t1, aabb &box) const override {
         return boundary->bounding_box(t0, t1, box);
     }
 
+    //Variables for constantMedium
     canHitGeneric *boundary;
     float density;
     material *phaseFunc;
 };
 
 #endif //RAYTRACER_CONSTANTMEDIUM_H
+
 //Calculates whether a ray of light hits the foggy object or not.
 bool constantMedium::hit(const ray &r, float t_min, float t_max, hit_record &rec) const {
     bool db = ((rand() / (RAND_MAX + 1.0)) < 0.00001);

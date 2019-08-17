@@ -11,8 +11,10 @@
 //Like a regular rectangle canHitGeneric sub-object, but on the basis of X-Z positioning.
 class xzRectangleCanHit : public canHitGeneric {
 public:
+    //default constructor for xzrectangle
     xzRectangleCanHit() {}
 
+    //initializes xzrectangle with input values
     xzRectangleCanHit(float _x0,
                       float _x1,
                       float _z0,
@@ -27,21 +29,26 @@ public:
         mp = mat;
     }
 
+    //destructor for xzrectangle
     ~xzRectangleCanHit() {
         delete mp;
     }
 
+    //determines if ray hits xzrectangle or not
     bool hit(const ray &r, float t_min, float t_max, hit_record &rec) const override;
 
+    //determines if bounding box is valid for xzrectangle or not
     bool bounding_box(float t0, float t1, aabb &box) const override {
         box = aabb(vec3(x0, k - 0.0001f, z0), vec3(x1, k + 0.0001f, z1));
         return true;
     }
 
+    //variables for xzrectangle
     material *mp;
     float x0, x1, z0, z1, k;
 };
 
+//determines if ray his xzrectangle or not
 bool xzRectangleCanHit::hit(const ray &r, float t_min, float t_max, hit_record &rec) const {
     float t = (k - r.origin().y()) / r.direction().y();
     if (t < t_min || t > t_max) {

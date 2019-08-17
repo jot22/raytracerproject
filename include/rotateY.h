@@ -11,19 +11,24 @@
 //Rotates a canHitGeneric object about the Y-Axis
 class rotateY : public canHitGeneric {
 public:
+    //initializes rotateY with canHitGeneric and angle
     rotateY(canHitGeneric *p, float angle);
 
+    //destructor for rotateY
     ~rotateY() {
         delete ptr;
     }
 
+    //determines if bounding box is valid or not
     bool bounding_box(float t0, float t1, aabb &box) const override {
         box = bBox;
         return hasBox;
     }
 
+    //determines if ray hits rotateY or not
     bool hit(const ray &r, float t_min, float t_max, hit_record &rec) const override;
 
+    //variables for rotateY
     float sinTheta;
     float cosTheta;
     bool hasBox;
@@ -31,6 +36,7 @@ public:
     canHitGeneric *ptr;
 };
 
+//Initializes rotateY with canHitGeneric and angle
 rotateY::rotateY(canHitGeneric *p, float angle) {
     ptr = p;
     float rad = (Pi / 180.0f) * angle;
@@ -63,6 +69,7 @@ rotateY::rotateY(canHitGeneric *p, float angle) {
     bBox = aabb(min, max);
 }
 
+//determines if ray hits rotateY or not
 bool rotateY::hit(const ray &r, float t_min, float t_max, hit_record &rec) const {
     vec3 origin = r.origin();
     vec3 dir = r.direction();

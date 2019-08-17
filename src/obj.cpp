@@ -100,8 +100,9 @@ void OBJ::parseFaces(char token[], float arr[]) {
     }
 }
 
-std::vector<vec3> OBJ::rotateYAxis(std::vector<vec3> selectedVector, float angle){
-    angle = angle*(piVal/180.0f);
+//Rotate obj around y axis by input angle
+std::vector <vec3> OBJ::rotateYAxis(std::vector <vec3> selectedVector, float angle) {
+    angle = angle * (piVal / 180.0f);
     for (auto &i : selectedVector) {
         vec3 vector = i;
         float x = vector.x();
@@ -120,17 +121,18 @@ std::vector<vec3> OBJ::rotateYAxis(std::vector<vec3> selectedVector, float angle
         float x1y2 = 0.0f;
         float x2y2 = cos(angle);
 
-        float xResult = (x0y0*x)+(x1y0*y)+(x2y0*z);
-        float yResult = (x0y1*x)+(x1y1*y)+(x2y1*z);
-        float zResult = (x0y2*x)+(x1y2*y)+(x2y2*z);
+        float xResult = (x0y0 * x) + (x1y0 * y) + (x2y0 * z);
+        float yResult = (x0y1 * x) + (x1y1 * y) + (x2y1 * z);
+        float zResult = (x0y2 * x) + (x1y2 * y) + (x2y2 * z);
 
-        i = {xResult,yResult,zResult};
+        i = {xResult, yResult, zResult};
     }
     return selectedVector;
 }
 
-std::vector<vec3> OBJ::rotateXAxis(std::vector<vec3> selectedVector,float angle){
-    angle = angle*(piVal/180.0f);
+//Rotate obj around x axis by input angle
+std::vector <vec3> OBJ::rotateXAxis(std::vector <vec3> selectedVector, float angle) {
+    angle = angle * (piVal / 180.0f);
     for (auto &i : selectedVector) {
         vec3 vector = i;
         float x = vector.x();
@@ -149,17 +151,18 @@ std::vector<vec3> OBJ::rotateXAxis(std::vector<vec3> selectedVector,float angle)
         float x1y2 = sin(angle);
         float x2y2 = cos(angle);
 
-        float xResult = (x0y0*x)+(x1y0*y)+(x2y0*z);
-        float yResult = (x0y1*x)+(x1y1*y)+(x2y1*z);
-        float zResult = (x0y2*x)+(x1y2*y)+(x2y2*z);
+        float xResult = (x0y0 * x) + (x1y0 * y) + (x2y0 * z);
+        float yResult = (x0y1 * x) + (x1y1 * y) + (x2y1 * z);
+        float zResult = (x0y2 * x) + (x1y2 * y) + (x2y2 * z);
 
-        i = {xResult,yResult,zResult};
+        i = {xResult, yResult, zResult};
     }
     return selectedVector;
 }
 
-std::vector<vec3> OBJ::rotateZAxis(std::vector<vec3> selectedVector, float angle){
-    angle = angle*(piVal/180.0f);
+//Rotate obj around z axis by input angle
+std::vector <vec3> OBJ::rotateZAxis(std::vector <vec3> selectedVector, float angle) {
+    angle = angle * (piVal / 180.0f);
     for (auto &i : selectedVector) {
         vec3 vector = i;
         float x = vector.x();
@@ -178,25 +181,26 @@ std::vector<vec3> OBJ::rotateZAxis(std::vector<vec3> selectedVector, float angle
         float x1y2 = 0.0f;
         float x2y2 = 1.0f;
 
-        float xResult = (x0y0*x)+(x1y0*y)+(x2y0*z);
-        float yResult = (x0y1*x)+(x1y1*y)+(x2y1*z);
-        float zResult = (x0y2*x)+(x1y2*y)+(x2y2*z);
+        float xResult = (x0y0 * x) + (x1y0 * y) + (x2y0 * z);
+        float yResult = (x0y1 * x) + (x1y1 * y) + (x2y1 * z);
+        float zResult = (x0y2 * x) + (x1y2 * y) + (x2y2 * z);
 
-        i = {xResult,yResult,zResult};
+        i = {xResult, yResult, zResult};
     }
     return selectedVector;
 }
 
-std::vector<vec3> OBJ::scaleObjectSize(std::vector<vec3> selectedVector, float scaleValue){
-    if(scaleValue <= 0.0f){
+//Scale obj by input value
+std::vector <vec3> OBJ::scaleObjectSize(std::vector <vec3> selectedVector, float scaleValue) {
+    if (scaleValue <= 0.0f) {
         return selectedVector;
     }
     for (auto &i : selectedVector) {
         vec3 scaleBy = i;
-        float xVal = scaleBy.x()*scaleValue;
-        float yVal = scaleBy.y()*scaleValue;
-        float zVal= scaleBy.z()*scaleValue;
-        i = {xVal,yVal,zVal};
+        float xVal = scaleBy.x() * scaleValue;
+        float yVal = scaleBy.y() * scaleValue;
+        float zVal = scaleBy.z() * scaleValue;
+        i = {xVal, yVal, zVal};
     }
     return selectedVector;
 }

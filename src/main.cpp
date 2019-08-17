@@ -28,7 +28,7 @@
 
 using namespace std;
 
-
+//rotate vector along y axis at given angle
 vec3 rotateYAxis(vec3 vector, float angle) {
     angle = angle * (3.14159265359f / 180.0f);
     float x = vector.x();
@@ -53,6 +53,7 @@ vec3 rotateYAxis(vec3 vector, float angle) {
     return {xResult, yResult, zResult};
 }
 
+//gets color of ray hitting world
 vec3 color(const ray &r, canHitGeneric *world, int depth) {
     hit_record rec;
 
@@ -70,6 +71,7 @@ vec3 color(const ray &r, canHitGeneric *world, int depth) {
 
 }
 
+//makes cornellbox scene
 canHitGeneric *cornellBox() {
     auto **list = new canHitGeneric *[8];
     int i = 0;
@@ -97,6 +99,7 @@ canHitGeneric *cornellBox() {
     return new canHitGenericList(list, i);
 }
 
+//makes cornell hot box scene
 canHitGeneric *cornellHotBox() {
     auto **list = new canHitGeneric *[8];
     int i = 0;
@@ -123,9 +126,10 @@ canHitGeneric *cornellHotBox() {
 
 }
 
+//makes cornell box with bunnies
 canHitGeneric *cornellHotBox2() {
     OBJ bunny("./bunny_centered.obj");
-    vector<vec3> bun = bunny.getFaceVertexVector();
+    vector <vec3> bun = bunny.getFaceVertexVector();
     auto **list = new canHitGeneric *[4 * bun.size() + 8];
     int i = 0;
     material *red = new diffuseMaterial_Lambertian(new constantTexture(vec3(0.65, 0.05, 0.05)));
@@ -176,6 +180,7 @@ canHitGeneric *cornellHotBox2() {
 
 }
 
+//makes scene with random spheres
 canHitGeneric *randomSceneGen() {
     int n = 500;
     auto **list = new canHitGeneric *[n + 1];
@@ -227,6 +232,7 @@ canHitGeneric *randomSceneGen() {
     return new bvhNode(list, i, 0.0, 0.0);
 }
 
+//makes cornell box with lots of spheres
 canHitGeneric *cornellLotsOfSpheres() {
     int nb = 20;
     auto **list = new canHitGeneric *[30];
@@ -290,15 +296,17 @@ canHitGeneric *cornellLotsOfSpheres() {
 
 }
 
+//sets up camera with input values
 camera makeCameraTri(float vFOV, float wH, vec3 z, float aperture, float distToFocus) {
     return {vFOV, wH, {278, 278, -800}, {278, 278, 0}, z, aperture, distToFocus, 0.0, 1.0};
 }
 
+//sets up camera with input values
 camera makeCameraBox(float vFOV, float wH, vec3 z, float aperture, float distToFocus) {
     return {vFOV, wH, {278, 278, -800}, {278, 278, 0}, z, aperture, distToFocus, 0.0, 1.0};
 }
 
-
+//makes triangle scene
 canHitGeneric *makeTriangleScene() {
     auto **list = new canHitGeneric *[1];
     int i = 0;
@@ -309,9 +317,10 @@ canHitGeneric *makeTriangleScene() {
     return new canHitGenericList(list, i);
 }
 
+//makes bunny scene
 canHitGeneric *makeBunny() {
     OBJ bunny("./bunny_centered.obj");
-    vector<vec3> bun = bunny.getFaceVertexVector();
+    vector <vec3> bun = bunny.getFaceVertexVector();
 //    std::cout << bun.size() << "\n";
     auto **list = new canHitGeneric *[bun.size()];
     material *red = new metalMaterial(new constantTexture(vec3(0.83, 0.686, 0.2156)), 0.0);
@@ -322,10 +331,10 @@ canHitGeneric *makeBunny() {
     return new bvhNode(list, k, 0, 0);
 }
 
-
+//main function for ray tracing where you can initialize world, perform ray tracing, and output to ppm
 int main() {
     ofstream myfile;
-    myfile.open("temptest.ppm");
+    myfile.open("test.ppm");
 
     //Size
     int nx = 1280; //Width
@@ -336,7 +345,15 @@ int main() {
 
     myfile << "P3\n" << nx << " " << ny << "\n255\n";
 
-    canHitGeneric *world = cornellHotBox2();
+    //initializes world to output to ppm
+    canHitGeneric *world =
+            //randomSceneGen();
+            //cornellBox();
+            //cornellHotBox();
+            cornellHotBox2();
+    //cornellLotsOfSpheres();
+    //makeTriangleScene();
+    //makeBunny();
 
     vec3 lookFrom(278, 278, -800);
     vec3 lookAt(278, 278, 0);
@@ -373,7 +390,7 @@ int main() {
     }
     std::cout << ":::::::Render Complete:::::::\n";
     myfile.close();
-    delete world;
+    //delete world;
 
     return 0;
 }

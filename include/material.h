@@ -14,8 +14,10 @@ struct hit_record;
 class material {
 public:
 
+    //Destructor for material
     virtual ~material() {}
 
+    //Scatters ray for material
     virtual bool scatter(const ray &r_in, const hit_record &rec, vec3 &attenuation, ray &scattered) const = 0;
 
     //By default, no Material emits any light

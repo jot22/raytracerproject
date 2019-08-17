@@ -10,28 +10,36 @@
 //Creates a spherical sub-object of the type canHitGeneric
 class sphereCanHit : public canHitGeneric {
 public:
+    //Default constructor for sphereCanHit
     sphereCanHit() = default;
 
+    //initializes sphere can hit with center, radius, and material
     sphereCanHit(vec3 cen, float r, material *m) : center(cen), radius(r), mat_ptr(m) {};
 
+    //destructor for sphereCanHit
     ~sphereCanHit() {
         delete mat_ptr;
     }
 
+    //Determines if ray hits sphere or not
     bool hit(const ray &r, float tMin, float tMax, hit_record &rec) const override;
 
+    //determines if bounding box is valid or not for sphereCanHit
     bool bounding_box(float t0, float t1, aabb &box) const override;
 
+    //variables for sphereCanHit
     vec3 center;
     float radius{};
     material *mat_ptr{};
 };
 
+//determines if bounding box is valid or not for sphereCanHit
 bool sphereCanHit::bounding_box(float t0, float t1, aabb &box) const {
     box = aabb(center - vec3(radius, radius, radius), center + vec3(radius, radius, radius));
     return true;
 }
 
+//Determines if ray hits sphere or not
 bool sphereCanHit::hit(const ray &r, float tMin, float tMax, hit_record &rec) const {
     vec3 oc = r.origin() - center;
     float a = dot(r.direction(), r.direction());

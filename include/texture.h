@@ -11,8 +11,10 @@
 //RGB based one, to one loaded from a PPM file.
 class texture {
 public:
+    //destructor for texture
     virtual ~texture() {}
 
+    //returns value for texture
     virtual vec3 value(float u, float v, const vec3 &p) const = 0;
 
 };

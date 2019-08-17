@@ -12,8 +12,10 @@
 //Useful as the base primitive object when loading OBJ files, as they're based on the Triangle primitive.
 class triangleCanHit : public canHitGeneric {
 public:
+    //default constructor for triangleCanHit
     triangleCanHit() {}
 
+    //initializes triangle can hit with vertices and material
     triangleCanHit(vec3 f0, vec3 f1, vec3 f2, material *m) {
         face0 = f0;
         face1 = f1;
@@ -21,14 +23,18 @@ public:
         mat = m;
     }
 
+    //destructor for triangleCanHit
     ~triangleCanHit() {
         delete mat;
     }
 
+    //determines if ray hits triangle or not
     bool hit(const ray &r, float t_min, float t_max, hit_record &rec) const override;
 
+    //determines if bounding box is valid for triangleCanHit or not
     bool bounding_box(float t0, float t1, aabb &box) const override;
 
+    //variables for triangleCanHit
     vec3 face0;
     vec3 face1;
     vec3 face2;

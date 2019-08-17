@@ -10,13 +10,16 @@
 //Creates a checkerboard pattern texture that can be applied to any Material class
 class checkerBoardTexture : public texture {
 public:
+    //Default constructor for checkBoardTexture
     checkerBoardTexture() = default;
 
+    //Initializes checkerBoardTexture with input textures
     checkerBoardTexture(texture *t0, texture *t1) {
         odd = t1;
         even = t0;
     }
 
+    //Destructor for checkerBoardTexture
     ~checkerBoardTexture() {
         delete odd;
         delete even;
@@ -31,6 +34,7 @@ public:
         return even->value(u, v, p);
     }
 
+    //Variables for checkerBoardTexture
     texture *odd;
     texture *even;
 };
