@@ -362,9 +362,9 @@ int main() {
             //         cornellHotBox();
 //            cornellHotBox2();
 //            cornellLotsOfSpheres();
-//            randomSceneGen();
+            randomSceneGen();
 //            makeTriangleScene();
-            makeBunny();
+//            makeBunny();
 
     //random/triangle/bunny camera look from/at
     vec3 lookFrom(13, 2, 3);
